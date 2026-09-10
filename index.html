@@ -1,1 +1,1649 @@
-<!doctype html><title>Preparing approved production site</title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+  <link rel="icon" href="assets/icons/favicon-heart.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="assets/icons/favicon-heart.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/favicon-heart.svg">
+  <title>Dr Xin Xu</title>
+  <style>
+    :root{--ink:#202b35;--muted:#66747e;--line:#dfe5e3;--accent:#527c80;--paper:#fbfaf7;--wash:#edf2ef;--body-font:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;--display-font:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif}
+    [data-theme="ink"]{--ink:#292a2a;--muted:#686c6b;--line:#deded9;--accent:#3f6874;--paper:#f8f7f3;--wash:#eceeea}[data-theme="terracotta"]{--ink:#352923;--muted:#77655c;--line:#e5d8d0;--accent:#a65f4a;--paper:#fcf8f4;--wash:#f3e7df}[data-theme="blue"]{--ink:#263442;--muted:#647483;--line:#d8e2ea;--accent:#42759b;--paper:#f5f9fc;--wash:#e5f0f7}
+    *{box-sizing:border-box} body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.75 var(--body-font)}
+    .shell{max-width:1280px;margin:auto;padding:28px 5vw 70px} .page>.lead{max-width:none} header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:20px}
+    .home{display:inline-flex;align-items:baseline;color:var(--ink);text-decoration:none;position:relative;top:5px}.brand-name{font:400 1rem/1 "Bradley Hand","Segoe Print","Comic Sans MS",cursive;letter-spacing:-.02em;color:var(--accent);margin-left:7px;white-space:nowrap;transition:color 160ms ease-out}.home:hover .brand-name,.home:focus-visible .brand-name{color:var(--ink)}.signature{font:italic 400 2rem/1.1 "Snell Roundhand","Segoe Script","Bradley Hand",cursive;letter-spacing:-.08em;color:var(--accent);transform:rotate(-7deg);display:inline-block}
+    nav{display:flex;align-items:center;gap:25px}nav a,.dropbtn{color:var(--ink);text-decoration:none;font-size:.94rem;background:none;border:0;font:inherit;cursor:pointer;padding:8px 0}.drop{position:relative}.dropmenu{visibility:hidden;opacity:0;transform:translateY(-5px) scale(.98);transform-origin:top right;position:absolute;right:-22px;top:40px;background:rgba(255,253,249,.98);border:1px solid var(--line);border-radius:16px;box-shadow:0 16px 35px #26332d1c;min-width:245px;padding:10px;z-index:2;transition:opacity 180ms cubic-bezier(.23,1,.32,1),transform 180ms cubic-bezier(.23,1,.32,1),visibility 180ms}.drop:hover .dropmenu,.drop:focus-within .dropmenu{visibility:visible;opacity:1;transform:translateY(0) scale(1)}.dropmenu a{display:block;padding:10px 13px;border-radius:10px}.dropmenu a:hover,.dropmenu a:focus{background:var(--wash);color:var(--accent)}
+    main{min-height:640px}.hero{max-width:900px;padding:145px 0 135px}.eyebrow{color:var(--accent);font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600}.hero h1{font:400 clamp(4rem,10vw,8rem)/.9 Georgia,serif;margin:24px 0 32px;letter-spacing:-.06em}.lead{font:1.25rem/1.7 Georgia,serif;max-width:700px}.side{border-left:1px solid var(--accent);padding-left:24px;color:var(--muted)}.side strong{color:var(--ink);font-weight:500}.rule{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;color:var(--muted);font-size:.92rem}.page{padding:75px 0}.page h1{font:400 clamp(3rem,7vw,5.4rem)/1 Georgia,serif;margin:18px 0 35px;letter-spacing:-.04em}.item{border-top:1px solid var(--line);padding:24px 0}.item h2{font:400 1.45rem/1.3 Georgia,serif;margin:0 0 5px}.muted{color:var(--muted);font-size:.9rem}.links a{color:var(--accent);margin-right:22px}.search{width:100%;max-width:560px;border:1px solid var(--line);background:white;border-radius:12px;padding:13px 15px;margin:0 0 28px;color:var(--ink);font:inherit}.tabs{display:inline-flex;flex-wrap:wrap;gap:4px;margin:35px 0 18px;padding:4px;background:var(--wash);border-radius:999px;max-width:100%}.tab{border:0;border-radius:999px;background:transparent;color:var(--muted);padding:10px 15px;font:inherit;cursor:pointer;transition:background 160ms ease-out,color 160ms ease-out,transform 160ms ease-out}.tab.active{background:var(--paper);color:var(--ink);box-shadow:0 2px 8px #26332d12}.tab:active{transform:scale(.97)}.tab:hover{color:var(--ink)}.panel{display:none}.panel.active{display:block}.panel.active .item{background:rgba(255,255,255,.28);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:12px 0;transition:transform 160ms ease-out,box-shadow 160ms ease-out}.panel.active .item:hover{transform:translateY(-2px);box-shadow:0 10px 24px #26332d0d}.empty{color:var(--muted);padding:25px 0}.footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:.86rem}@media(max-width:720px){header{align-items:flex-start;gap:15px}.home{flex:0 0 auto;min-width:max-content}.signature{font-size:1.7rem;white-space:nowrap}.wordmark-loose .wordmark-i:after{font-size:2rem}.wordmark-loose .wordmark-i:before{top:-.05rem;font-size:.6rem}nav{gap:12px;flex-wrap:wrap;justify-content:flex-end}.hero{padding:72px 0 80px}.hero h1{font-size:3.3rem;margin-bottom:24px}.lead{font-size:1.08rem}.page{padding:48px 0}.page h1{font-size:2.8rem;margin-bottom:26px}.panel.active .item{padding:14px 15px;margin:8px 0}.panel.active .item h2{font-size:1.02rem;line-height:1.25}.panel.active .item p{font-size:.86rem;line-height:1.48}.tabs{display:flex;border-radius:16px}.tab{flex:1 1 100%;text-align:left}.dropmenu{right:0}}
+    .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}.links a{color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:10px 15px;background:rgba(255,255,255,.32);transition:background 160ms ease-out,color 160ms ease-out,border-color 160ms ease-out,transform 160ms ease-out}.links a:active{transform:scale(.97)}.theme-picker{display:inline-flex;gap:6px;margin-left:14px}.theme-picker button{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:3px 9px;font:inherit;font-size:.78rem;cursor:pointer}.theme-picker button:hover,.theme-picker button:focus{border-color:var(--accent);color:var(--ink)}
+    @media (hover:hover) and (pointer:fine){.links a:hover,.links a:focus{background:var(--accent);border-color:var(--accent);color:white;transform:translateY(-2px)}}
+    @media (prefers-reduced-motion:reduce){.dropmenu,.links a{transition:none}.links a:hover,.links a:focus{transform:none}}
+    .hero h1,.page h1,.item h2,.modal h2{font-family:var(--display-font)}.lead{font-family:var(--display-font)}.clickable h2:after{font-family:var(--body-font)}
+    .clickable{cursor:pointer}.clickable h2:after{content:' ↗';color:var(--accent);font:1rem system-ui}.modal-backdrop{position:fixed;inset:0;background:#202b3548;display:grid;place-items:center;padding:24px;z-index:5;opacity:0;visibility:hidden;transition:opacity 180ms ease-out,visibility 180ms}.modal-backdrop.open{opacity:1;visibility:visible}.modal{width:min(720px,100%);max-height:min(760px,90vh);overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 70px #202b3540;padding:32px;transform:translateY(8px) scale(.98);transition:transform 180ms cubic-bezier(.23,1,.32,1)}.modal-backdrop.open .modal{transform:translateY(0) scale(1)}.modal-close{float:right;border:0;background:var(--wash);border-radius:50%;width:34px;height:34px;font-size:1.2rem;cursor:pointer}.modal h2{font:400 clamp(2rem,5vw,3.2rem)/1.05 Georgia,serif;margin:16px 42px 28px 0}.detail{border-top:1px solid var(--line);padding:14px 0}.detail strong{display:block;color:var(--accent);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.detail p{margin:4px 0}.modal a{color:var(--accent)}
+    h1,h2{font-family:var(--display-font)}.lead{font-family:var(--display-font)}.tabs{display:flex;flex-wrap:wrap;gap:10px;background:transparent;border-radius:0;padding:0}.tab{border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.32);color:var(--muted);transition:background 160ms ease-out,color 160ms ease-out,border-color 160ms ease-out,transform 160ms ease-out}.tab.active{background:var(--accent);border-color:var(--accent);color:white}.tab:hover{border-color:var(--accent)}
+    .wordmark-loose .signature{font-family:"Bradley Hand","Segoe Print",cursive;transform:rotate(-4deg);letter-spacing:-.04em}.wordmark-loose .wordmark-i{font-size:0;position:relative}.wordmark-loose .wordmark-i:after{content:'ı';font-size:2.35rem}.wordmark-loose .wordmark-i:before{content:'♥';position:absolute;left:50%;top:-.2em;transform:translateX(-50%) rotate(-8deg);color:var(--accent);font:400 .38em/1 var(--body-font)}.wordmark-formal .signature{font-family:"Kunstler Script","Snell Roundhand",cursive;transform:rotate(-8deg);letter-spacing:-.1em}.wordmark-quiet .signature{font-family:"Baskerville","Iowan Old Style",serif;font-style:italic;transform:rotate(-3deg);letter-spacing:-.06em}
+    .wordmark-loose .wordmark-i{display:inline-block;position:relative}.wordmark-loose .wordmark-i:before{content:'♥';position:absolute;left:76%;top:-.31rem;transform:translateX(-50%) rotate(4deg);color:var(--accent);font:400 .75rem/1 var(--body-font);z-index:2}.wordmark-round .signature{font-family:"Segoe Print","Bradley Hand",cursive;transform:rotate(-3deg);letter-spacing:-.05em}.wordmark-air .signature{font-family:"Chalkboard SE","Bradley Hand",cursive;font-weight:300;transform:rotate(-5deg);letter-spacing:.01em}.wordmark-italic .signature{font-family:"Baskerville","Iowan Old Style",serif;font-style:italic;transform:rotate(-3deg);letter-spacing:-.06em}
+    .wordmark-loose .wordmark-i:before{left:78%;top:-.08rem;font-size:.68rem;transform:translateX(-50%) rotate(8deg)}
+    /* Static visual direction: interaction changes colour or visibility only. */
+    .dropmenu,.tab,.links a,.panel.active .item,.modal-backdrop,.modal{transition:none!important}
+    .dropmenu,.panel.active .item:hover,.modal-backdrop.open .modal{transform:none!important}
+    .tab:active,.links a:active,.links a:hover,.links a:focus,.panel.active .item:hover{transform:none!important}
+    nav{gap:18px}@media(max-width:720px){nav{gap:17px}}
+    .hero{padding-bottom:72px}@media(max-width:720px){.hero{padding-bottom:44px}}
+    main:has(.hero){min-height:0}
+    .hero h1{margin:0;padding:120px 0 110px}@media(max-width:720px){.hero h1{padding:84px 0 76px}}
+    .hero{position:relative;isolation:isolate;padding:105px 0 72px;max-width:900px;min-height:0;display:block;background:none;border-radius:0}.hero:before{display:none}.hero>div{max-width:720px;position:relative;z-index:1}.hero h1{padding:120px 0 110px}.hero .lead{max-width:610px}.hero .links{margin-top:42px}
+    @media(max-width:720px){.hero{padding:64px 0 44px}.hero h1{padding:84px 0 76px}.hero .links{margin-top:34px}}
+    .hero .links a,.page .links a{border:0;border-bottom:1px solid transparent;border-radius:0;background:transparent;padding:4px 0;color:var(--ink);transform:none}
+    .hero .links a:hover,.hero .links a:focus,.page .links a:hover,.page .links a:focus{background:transparent;border-bottom-color:var(--accent);color:var(--accent);transform:none}
+    .hero .links a,.page .links a{border-bottom-color:var(--line)}
+    .hero .links a:hover,.hero .links a:focus,.page .links a:hover,.page .links a:focus{border-bottom-color:var(--accent)}
+    .hero h1{margin-top:36px;margin-bottom:44px}
+    /* Keep the original quiet composition while bringing the introduction slightly higher into view. */
+    .hero{padding-top:72px;padding-bottom:48px}
+    .hero h1{padding-top:82px;padding-bottom:72px}
+    @media(max-width:720px){.hero{padding-top:52px;padding-bottom:36px}.hero h1{padding-top:64px;padding-bottom:58px}}
+    .panel[data-panel="all"]{margin-top:0;padding-top:0}.panel[data-panel="all"].active .item:first-child{margin-top:0}
+    .panel.active .item h2{font-size:1.22rem;line-height:1.28}
+    .modal h2{font-size:clamp(1.55rem,3.5vw,2.25rem);line-height:1.12}
+    #modalBody{display:flex;flex-direction:column}#modalBody .summary-detail{order:-1}
+    #modalBody .source-note{display:none}#modalType{display:none}
+    .filterbar{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin:28px 0 24px}.filter-menu{position:relative}.filter-menu summary{list-style:none;cursor:pointer;border:1px solid var(--line);border-radius:12px;padding:11px 14px;background:var(--paper);color:var(--ink);font-size:.92rem}.filter-menu summary::-webkit-details-marker{display:none}.filter-menu[open] summary{border-color:var(--accent);box-shadow:0 0 0 3px rgba(109,137,116,.12)}.filter-options{position:absolute;z-index:4;top:calc(100% + 8px);left:0;min-width:240px;padding:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 30px rgba(38,51,45,.12)}.filter-options label{display:flex;gap:9px;align-items:flex-start;padding:8px 6px;color:var(--ink);font-size:.9rem;line-height:1.35}.filter-options input{accent-color:var(--accent);margin-top:3px}.filter-reset{border:0;background:transparent;color:var(--muted);padding:11px 4px;font:inherit;cursor:pointer}.filter-reset:hover{color:var(--accent)}.filter-count{margin:0 0 18px;color:var(--muted);font-size:.86rem}.filter-empty{display:none;color:var(--muted);padding:25px 0}.footer{display:flex;justify-content:flex-end;gap:18px;align-items:center;text-align:right;font-size:.78rem}.footer a{color:var(--muted);text-decoration:none}.footer a:hover,.footer a:focus{color:var(--ink)}@media(max-width:720px){.filterbar{gap:8px}.filter-menu summary{font-size:.84rem;padding:9px 11px}.filter-options{position:fixed;left:16px;right:16px;top:auto;bottom:16px;min-width:0}.footer{justify-content:flex-start;flex-wrap:wrap;text-align:left;gap:10px}
+    }
+    .project-group-label{font:500 1.05rem/1.3 Georgia,serif;margin:34px 0 10px;color:var(--accent);letter-spacing:.01em}.project-group-label:first-child{margin-top:8px}
+    .research-overview .item:first-child .eyebrow{margin-top:-18px}
+    .research-overview .item>p{font:inherit;line-height:1.7;max-width:none}
+    body,body *{font-family:var(--body-font)!important}
+    .hero h1,.page h1{font-family:var(--display-font)!important}
+    :root{--body-font:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;--display-font:var(--body-font)}
+    nav,.eyebrow,.muted,.filterbar,.filter-count,.filter-empty,.footer,.dropmenu,.tab,.search,.filter-options{font-family:"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif!important}
+    /* Final landing-page calibration: preserve the original composition, reduce only excess vertical air. */
+    .hero{padding-top:72px;padding-bottom:48px}
+    .hero h1{padding-top:82px;padding-bottom:72px}
+    @media(max-width:720px){.hero{padding-top:52px;padding-bottom:36px}.hero h1{padding-top:64px;padding-bottom:58px}}
+    /* Homepage cover: text-led left column with a quiet zine image on the right. */
+    .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,310px);gap:clamp(42px,8vw,108px);align-items:center;min-height:560px;padding:78px 0 70px;background:transparent}
+    .hero:before{display:none}
+    .hero>div{max-width:650px;align-self:end}
+    .hero h1{padding:28px 0 34px;margin:0}
+    /* Plain-text homepage: remove the former image column and keep the copy flush with the content area. */
+    .hero{display:block;grid-template-columns:none;gap:0;min-height:0}
+    .hero>div{max-width:720px;margin:0;padding:0}
+    .hero:before{display:none}
+    .hero .eyebrow{display:flex;align-items:center;gap:12px}
+    .hero h1{max-width:680px;margin-top:28px;margin-bottom:34px;letter-spacing:-.075em}
+    .hero .lead{max-width:600px}
+    .hero .links{margin-top:34px}
+    @media(max-width:720px){.hero h1{margin-top:22px;margin-bottom:28px}}
+    /* Lift the homepage introduction slightly on both desktop and phone layouts. */
+    .hero{padding-top:54px}
+    @media(max-width:720px){.hero{padding-top:8px!important}}
+    @media(max-width:720px){.hero h1{font-size:2.65rem!important}.page h1{font-size:2.05rem!important}}
+    @media(max-width:720px){.publications-page .panel.active .item h2,.projects-page .panel.active .item h2{font-size:.96rem!important;line-height:1.28}.publications-page .panel.active .item p,.projects-page .panel.active .item p{font-size:.78rem!important;line-height:1.4}}
+    @media(max-width:720px){body:has(.hero) header{border-bottom:1px solid var(--line)}.hero{padding-bottom:72px!important}.hero .links a{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;padding-left:0;padding-right:0}body:has(.hero) .footer{border-top:0}}
+    /* Editorial micro-interactions: a short hover rule in menus and a quiet title reveal on page entry. */
+    .dropmenu a{position:relative;background:transparent!important}
+    .dropmenu a:after{content:"";position:absolute;left:13px;right:13px;bottom:6px;width:auto;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform 180ms ease-out}
+    .dropmenu a:hover:after,.dropmenu a:focus-visible:after{transform:scaleX(1)}
+    nav a:hover,nav a:focus-visible,.dropbtn:hover,.dropbtn:focus-visible{color:var(--accent)!important}
+    .hero h1{animation:eyebrow-drop 1250ms cubic-bezier(.22,.8,.28,1) both}
+    .page h1{animation:none}
+    .page>.eyebrow{animation:eyebrow-drop 1250ms cubic-bezier(.22,.8,.28,1) both}
+    @keyframes title-open-hero{from{opacity:.35;letter-spacing:-.11em;transform:translateY(4px)}to{opacity:1;letter-spacing:-.075em;transform:translateY(0)}}
+    @keyframes title-open-page{from{opacity:.35;letter-spacing:-.075em;transform:translateY(4px)}to{opacity:1;letter-spacing:-.04em;transform:translateY(0)}}
+    @keyframes eyebrow-drop{from{opacity:.2;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:reduce){.dropmenu a:after{transition:none}.hero h1,.page h1,.page>.eyebrow{animation:none}}
+    /* Stable homepage background artwork: anchored to the lower-right rather than laid out as a separate object. */
+    /* Link colour system: use the site's teal accent consistently across all text links. */
+    nav a,.dropbtn,.hero .links a,.page .links a,.item a,.modal a,.footer a{color:var(--accent)}
+    nav a:hover,nav a:focus,.dropbtn:hover,.dropbtn:focus,.hero .links a:hover,.hero .links a:focus,.page .links a:hover,.page .links a:focus,.item a:hover,.item a:focus,.modal a:hover,.modal a:focus,.footer a:hover,.footer a:focus{color:var(--ink)}
+    .home{color:var(--accent)}
+    /* Final navigation calibration: all top-level items use the same teal hover state. */
+    header nav>a:hover,header nav>a:focus-visible,header nav .dropbtn:hover,header nav .dropbtn:focus-visible{color:var(--accent)!important}
+    header nav>a,header nav .dropbtn{position:relative;z-index:3}
+    header nav>a:after,header nav .dropbtn:after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform 180ms ease-out}
+    header nav>a:hover:after,header nav>a:focus-visible:after,header nav .dropbtn:hover:after,header nav .dropbtn:focus-visible:after{transform:scaleX(1)}
+    .dropmenu a{font-weight:400!important}
+    .dropmenu a:after{height:.5px!important;transform:scaleY(.75) scaleX(0);transform-origin:left center}
+    .dropmenu a:hover:after,.dropmenu a:focus-visible:after{transform:scaleY(.75) scaleX(1)}
+    .hero:before{content:none!important;background:none!important}
+    .hero:before,.hero:after{display:none!important;content:none!important;background-image:none!important}
+    nav a,.dropbtn{font-size:1rem!important}
+    @media(max-width:720px){body:has(.hero) header,body:not(:has(.hero)) header{display:flex}html.mobile-preview body:has(.hero) header .home,html.mobile-preview body:not(:has(.hero)) header .home,html.narrow-preview body:has(.hero) header .home,html.narrow-preview body:not(:has(.hero)) header .home{display:none}body:has(.hero) header nav,body:not(:has(.hero)) header nav{display:flex;width:100%;flex-wrap:wrap;justify-content:flex-end;column-gap:10px;row-gap:4px;margin:0}}
+    .mobile-nav-break{display:none}@media(max-width:720px){.mobile-nav-break{display:block;flex-basis:100%;height:0}}
+    @media(max-width:720px){.hero>div{display:flex;flex-direction:column;align-items:flex-start}.hero h1{transform:none;margin-top:27px}.hero .lead:first-of-type{transform:none;margin-top:5px}.hero .role-note{transform:none;margin-top:9px}}
+    @media(max-width:720px){.footer{transform:none;padding-top:21px}}
+    html,body{overflow-x:hidden}
+    /* Quiet colour blocks for the thematic overview pages, inspired by editorial issue layouts. */
+    .research-overview{display:grid;gap:14px;margin-top:34px}
+    .research-overview .item{margin:0;border:0;border-radius:0;padding:28px 30px;background:rgba(237,242,239,.72)}
+    .research-overview .item:nth-child(2){background:rgba(255,255,255,.54)}
+    .research-overview .item:nth-child(3){background:rgba(232,240,237,.62)}
+    .research-overview .item h2{margin-bottom:10px}
+    .research-overview .item h3{margin:20px 0 4px;color:var(--muted);font:600 .78rem/1.35 "Avenir Next","Segoe UI",sans-serif;letter-spacing:.06em;text-transform:uppercase}
+    .research-overview .item p:last-child{margin-bottom:0}
+    .page>.tabs + .panel.active{display:grid;gap:14px;margin-top:28px}
+    .page>.tabs + .panel.active .item{margin:0;border:0;border-radius:0;padding:26px 30px;background:rgba(237,242,239,.68)}
+    .page>.tabs + .panel.active .item:nth-child(even){background:rgba(255,255,255,.54)}
+    .about-page{display:grid;gap:14px}
+    .about-page>.eyebrow,.about-page>h1,.about-page>.lead{margin-left:0;margin-right:0}
+    .about-page>.item{margin:0;border:0;border-radius:0;padding:28px 30px;background:rgba(237,242,239,.72)}
+    .about-page>.item:nth-of-type(2){background:rgba(255,255,255,.54)}
+    .about-page>.item h2{margin-bottom:10px}
+    .about-page>.item p:last-child{margin-bottom:0}
+    .teaching-blocks{display:grid;gap:14px;margin-top:18px}
+    .teaching-blocks .item{margin:0;border:0;border-radius:0;padding:28px 30px;background:var(--panel-green)}
+    /* Colour rule: Teaching is the slightly deeper green; Supervision, the second Research overview block, and the second Engagement block share this lighter green. */
+    :root{--panel-green:#edf2efb8;--panel-green-soft:#edf2ef80}
+    .teaching-blocks .item:nth-child(2),.research-overview .item:nth-child(2){background:var(--panel-green-soft)}
+    .about-page>.item{background:var(--panel-green)}
+    .about-page>.item:nth-of-type(2){background:var(--panel-green-soft)}
+    .teaching-blocks .item h2{margin-bottom:10px}
+    .teaching-blocks .item p:last-child{margin-bottom:0}
+    @media(max-width:720px){.research-overview .item,.page>.tabs + .panel.active .item{padding:22px 20px}}
+    @media(min-width:721px){.dropmenu{left:0;right:auto}}
+    header nav>a:after,header nav .dropbtn:after{display:none!important}
+    @media(min-width:721px){.dropmenu{background:rgba(255,253,249,.96)!important}.drop:hover .dropmenu,.drop:focus-within .dropmenu{transform:translateY(0) scale(1)!important}}
+    header nav>a:hover,header nav>a:focus-visible,header nav .dropbtn:hover,header nav .dropbtn:focus-visible{color:var(--accent)!important;opacity:1!important}
+    header nav>a,header nav .dropbtn{color:var(--accent)!important}
+    header nav>a:hover,header nav>a:focus-visible,header nav .dropbtn:hover,header nav .dropbtn:focus-visible{color:var(--ink)!important}
+    header nav{position:relative;top:5px}
+    .research-overview .item,.about-page>.item,.teaching-blocks .item,.page>.tabs + .panel.active .item{border-radius:16px!important}
+    .search,.search::placeholder{font-family:var(--body-font)!important}
+    body:has(.hero) .footer{border-top:0}
+    .book-meta p.book-question b{display:block;margin-bottom:4px}
+    .project-group-label .group-sub{display:inline-block;margin-left:1.2em;font-size:.78em;font-style:italic;color:var(--muted);font-weight:400;letter-spacing:.01em}
+    /* Keep the footer quiet on every page. */
+    .footer{border-top:0!important}
+    .footer{padding-bottom:2px}
+    .accessibility-page .item,.privacy-page .item{border-top:0!important}
+    /* Keep Research menu anchored to its trigger at every viewport width. */
+    .dropmenu{left:0!important;right:auto!important;transform-origin:top left!important}
+    /* Keep the Research flyout compact while preserving readable tap targets. */
+    .dropmenu{min-width:0!important;padding:8px!important}
+    .dropmenu a{padding:8px 10px!important}
+    @media(min-width:721px){.dropmenu{width:180px!important;min-width:180px!important}}
+    @media(max-width:720px){.dropmenu{position:absolute!important;inset-inline-start:auto!important;inset-inline-end:0!important;left:auto!important;right:0!important;width:150px!important;min-width:150px!important;max-width:calc(100vw - 24px)!important;transform-origin:top right!important}.dropmenu a{padding-left:8px!important;padding-right:8px!important}}
+    header nav a:focus-visible,header nav .dropbtn:focus-visible,.dropmenu a:focus-visible{outline:2px solid rgba(255,255,255,.92);outline-offset:3px;border-radius:4px}
+    @media(max-width:380px){header nav{column-gap:8px;row-gap:3px}.dropmenu{width:146px!important;min-width:146px!important}}
+    /* Keep homepage and inner-page hover states distinct and visible. */
+    body:has(.hero) header nav>a:hover,body:has(.hero) header nav>a:focus-visible,body:has(.hero) header nav .dropbtn:hover,body:has(.hero) header nav .dropbtn:focus-visible{color:var(--ink)!important}
+    body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus,body:not(:has(.hero)) header nav>a:active,body:not(:has(.hero)) header nav .dropbtn:hover,body:not(:has(.hero)) header nav .dropbtn:focus,body:not(:has(.hero)) header nav .dropbtn:active,body:not(:has(.hero)) .dropmenu a:hover,body:not(:has(.hero)) .dropmenu a:focus,body:not(:has(.hero)) .dropmenu a:active{color:#527c80!important}
+    .dropmenu a:hover,.dropmenu a:focus,.dropmenu a:active{color:var(--accent)!important}
+    @media (hover:none) and (pointer:coarse){body:not(:has(.hero)) header nav>a:focus,body:not(:has(.hero)) header nav>a:active,body:not(:has(.hero)) header .dropbtn:focus,body:not(:has(.hero)) header .dropbtn:active,body:not(:has(.hero)) .dropmenu a:focus,body:not(:has(.hero)) .dropmenu a:active{color:#527c80!important}}
+    .hero .links{transform:translateY(5px)}
+    @media(max-width:720px){.hero{padding-bottom:92px!important}}
+    /* Keep catalogue filter options attached to their own control. */
+    .filter-menu{position:relative!important}
+    .filter-options{position:absolute!important;top:calc(100% + 8px)!important;left:0!important;right:auto!important;bottom:auto!important;z-index:20!important}
+    @media(max-width:720px){.filter-options{min-width:min(240px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important}}
+    .books-list{display:grid;gap:14px;margin-top:30px}.books-list .item{margin:0;border:0;border-radius:16px;padding:28px 30px;background:rgba(237,242,239,.72)}.books-list .item:nth-child(2){background:rgba(255,255,255,.54)}.books-list .item h2{margin:0 0 8px}.books-list .item p{margin-bottom:0}@media(max-width:720px){.books-list .item{padding:22px 20px}.books-list .item h2{font-size:1.15rem}}
+    .book-detail{display:grid;grid-template-columns:150px 1fr;gap:26px;align-items:start}.book-cover{aspect-ratio:2/3;overflow:hidden;background:var(--wash) url("assets/img/book_covers/handbook-meta-research.jpg") center/cover no-repeat;box-shadow:0 10px 22px #26332d18;color:transparent!important}.book-cover.alt{background-image:url("assets/img/book_covers/changing-higher-education-east-asia.jpg")}.book-cover strong,.book-cover small{display:none}.book-meta{font-size:1rem;line-height:1.62}.book-meta strong{color:var(--accent);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}.book-meta p{margin:4px 0 14px}.book-meta p.reader-question b{display:block;margin-bottom:4px}.book-meta a{color:var(--accent)}@media(max-width:720px){.book-detail{grid-template-columns:110px 1fr;gap:18px}.book-meta{font-size:.84rem}.book-meta p{margin-bottom:9px}}
+    .research-books{display:none!important}
+    .brand-name{display:block;width:78px;height:auto;margin-left:0;position:relative;top:4px;object-fit:contain;transition:filter 160ms ease-out!important}.home:hover .brand-name,.home:focus-visible .brand-name{filter:saturate(.82) brightness(.82)!important}
+    .hero .links{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;gap:14px;align-items:center}.hero .links a{position:relative;display:inline-flex;flex:0 0 auto;align-items:center;margin:0;padding:12px 18px;border:0;color:var(--accent);font:400 1rem/1.2 var(--body-font);letter-spacing:.02em;text-decoration:none;transition:color .2s ease,transform .2s ease}.hero .links a:before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:45px;border-radius:50px;background:color-mix(in srgb,#eadfce 35%,var(--paper));transform:scaleX(.45);transform-origin:left center;transition:transform .3s ease,background .3s ease;z-index:-1}.hero .links a:after{content:none}.hero .links a:hover,.hero .links a:focus-visible{border:0;color:color-mix(in srgb,var(--accent) 70%,var(--ink));transform:none}.hero .links a:hover:before,.hero .links a:focus-visible:before{transform:scaleX(1);background:color-mix(in srgb,#eadfce 35%,var(--paper))}.hero .links a:active{transform:scale(.95)}@media(max-width:520px){.hero .links{align-items:flex-start;flex-direction:column!important;gap:8px}.hero .links a{font-size:.92rem}}
+    /* Temporary landscape placeholder for the homepage hero. */
+    .hero{position:relative;isolation:isolate;min-height:650px;max-width:none;margin:0 -5vw;padding:78px 5vw 72px;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(180deg,#9aa9b4 0%,#c7c9c4 48%,#8d9a91 49%,#596c61 70%,#263b35 100%)}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 78% 22%,rgba(255,250,232,.7),transparent 21%),linear-gradient(158deg,transparent 0 46%,rgba(91,112,108,.62) 47% 55%,transparent 56%),linear-gradient(27deg,transparent 0 52%,rgba(55,78,72,.85) 53% 70%,transparent 71%),linear-gradient(165deg,transparent 0 64%,rgba(32,55,49,.96) 65%)}.hero>div{position:relative;z-index:1;max-width:720px}.hero h1,.hero .lead,.hero .role-note{color:#fff}.hero h1{max-width:760px;text-shadow:0 2px 18px rgba(25,39,38,.22)}.hero .lead{max-width:620px;text-shadow:0 1px 10px rgba(25,39,38,.18)}.hero .links{margin-top:34px}.hero .links a{color:#fff}.hero .links a:hover,.hero .links a:focus-visible{color:#fff}.hero .links a:before{background:rgba(250,239,216,.78)}.hero .links a:hover:before,.hero .links a:focus-visible:before{background:rgba(250,239,216,.78)}@media(max-width:720px){.hero{min-height:650px;margin:0 -5vw;padding:52px 5vw 52px}.hero .links{margin-top:28px}}
+    .hero{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);min-height:calc(100vh - 118px);background-size:cover;background-position:center}.hero:before{background-size:cover;background-position:center}.hero>div{width:min(100%,720px)}@media(max-width:720px){.hero{min-height:calc(100svh - 112px)}}
+    body:has(.hero),body:has(.hero) .hero{background-image:linear-gradient(rgba(18,43,38,.12),rgba(18,43,38,.24)),url("assets/img/hero/alpine-forest.jpg")!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+    body:has(.hero) .hero{background:transparent!important;background-image:none!important}.hero:before{background:linear-gradient(90deg,rgba(13,39,34,.34),transparent 72%)!important}.hero h1{text-shadow:0 2px 18px rgba(25,39,38,.28)}.hero .lead{text-shadow:0 1px 10px rgba(25,39,38,.24)}
+    .hero>div{width:min(66.666vw,760px);max-width:66.666vw}.hero h1,.hero .lead{max-width:100%}@media(max-width:720px){.hero>div{width:100%;max-width:100%}}
+    .hero h1{font-size:clamp(3.2rem,7.5vw,6.2rem)}@media(min-width:721px){.hero>div{width:min(61.8vw,710px);max-width:61.8vw}.hero .lead{font-size:1.08rem;line-height:1.62}}
+    .hero h1 .name-accent{color:#fff!important;font-style:italic}
+    body:not(:has(.hero)) header{width:100vw;margin-top:-28px;margin-left:calc(50% - 50vw);margin-bottom:0;min-height:0;align-items:flex-start;padding:28px 5vw 20px;background:linear-gradient(rgba(18,43,38,.18),rgba(18,43,38,.25)),url("assets/img/hero/alpine-forest.jpg") center/cover fixed no-repeat;border-bottom-color:rgba(255,255,255,.72)!important}body:not(:has(.hero)) header:after{display:none}body:not(:has(.hero)) header nav>a,body:not(:has(.hero)) header .dropbtn{color:rgba(255,255,255,.92)!important}body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus-visible,body:not(:has(.hero)) header .dropbtn:hover,body:not(:has(.hero)) header .dropbtn:focus-visible{color:#fff!important}body:not(:has(.hero)) header .home{filter:brightness(0) invert(1)}
+    body:has(.hero) header .home,body:not(:has(.hero)) header .home{position:absolute;left:5vw;top:34px;margin:0;transform:none}body:has(.hero) header .brand-name,body:not(:has(.hero)) header .brand-name{top:4px;transform:none}body:has(.hero) header nav,body:not(:has(.hero)) header nav{margin-left:auto}
+    .page h1{font-size:clamp(2.25rem,5vw,3.8rem)}@media(max-width:720px){.page h1{font-size:1.75rem}}
+    body:has(.hero) .footer,body:has(.hero) .footer>a[href="#/accessibility"],body:has(.hero) .footer>a[href="#/privacy"]{color:#f3eee4!important}body:has(.hero) .footer>a[href="#/accessibility"]:hover,body:has(.hero) .footer>a[href="#/accessibility"]:focus-visible,body:has(.hero) .footer>a[href="#/privacy"]:hover,body:has(.hero) .footer>a[href="#/privacy"]:focus-visible{color:rgba(243,238,228,.68)!important}
+    /* Inner-page navigation hover must win over the photographic header defaults. */
+    body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus,body:not(:has(.hero)) header nav>a:active,body:not(:has(.hero)) header .dropbtn:hover,body:not(:has(.hero)) header .dropbtn:focus,body:not(:has(.hero)) header .dropbtn:active{color:#527c80!important}
+    body:not(:has(.hero)) header nav>a:focus:not(:focus-visible),body:not(:has(.hero)) header .dropbtn:focus:not(:focus-visible){color:rgba(255,255,255,.92)!important}
+    /* Final navigation system: one predictable geometry for desktop and mobile. */
+    .dropmenu{transition:opacity 300ms cubic-bezier(.23,1,.32,1),transform 300ms cubic-bezier(.23,1,.32,1),visibility 300ms!important}
+    .drop{z-index:30!important}.dropmenu{z-index:31!important;pointer-events:auto}
+    @media(min-width:721px){header nav{gap:18px}.dropmenu{width:180px!important;min-width:180px!important;left:0!important;right:auto!important;transform-origin:top left!important}}
+    @media(max-width:720px){header nav{column-gap:10px!important;row-gap:4px!important}.dropmenu{width:150px!important;min-width:150px!important;left:auto!important;right:0!important;transform-origin:top right!important}}
+    @media(max-width:720px) and (orientation:landscape){.hero{min-height:calc(100svh - 96px);padding-top:28px!important;padding-bottom:48px!important}.hero h1{margin-top:12px}}
+    @media(max-width:380px){.shell{padding-top:12px}header{padding-bottom:8px}.hero{margin-top:-36px!important;padding:0 4vw 48px!important}.hero h1{font-size:2.45rem!important;margin:0!important;padding:8px 0 24px!important}.hero .lead{font-size:1rem;line-height:1.58}.hero .role-note{font-size:.92rem}}
+    html.narrow-preview body{background:var(--paper)!important}html.narrow-preview body:has(.hero){background:linear-gradient(rgba(18,43,38,.12),rgba(18,43,38,.24)),url("assets/img/hero/alpine-forest.jpg") center/cover fixed no-repeat!important}html.narrow-preview .shell{padding-top:12px;padding-bottom:20px!important}html.narrow-preview header{padding-bottom:8px}html.narrow-preview .hero{display:block!important;align-items:initial!important;min-height:360px!important;margin-top:68px!important;padding:0 4vw 48px!important;background:transparent!important}html.narrow-preview .hero h1{font-size:2.45rem!important;margin:0!important;padding:8px 0 24px!important}html.narrow-preview .hero .lead{font-size:1rem;line-height:1.58}html.narrow-preview .hero .role-note{font-size:.92rem}html.narrow-preview .footer{margin-top:60px!important}
+    @media(max-width:380px){body:has(.hero){background:linear-gradient(rgba(18,43,38,.12),rgba(18,43,38,.24)),url("assets/img/hero/alpine-forest.jpg") center/cover fixed no-repeat!important}.hero{background:linear-gradient(rgba(18,43,38,.08),rgba(18,43,38,.18)),url("assets/img/hero/alpine-forest.jpg") center/cover no-repeat!important}}@media(max-width:720px){html:not(.narrow-preview) body:has(.hero) .hero h1{margin-top:27px!important;padding-top:84px!important}}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero>div{width:min(61.8vw,710px)!important;max-width:61.8vw!important}html:not(.mobile-preview):not(.narrow-preview) header .home,html.ipad-landscape header .home{display:inline-flex!important;z-index:4!important;pointer-events:auto!important}@media(max-width:720px){html:not(.mobile-preview):not(.narrow-preview) header nav{display:flex!important;width:auto!important;max-width:calc(100% - 90px)!important;flex:1 1 auto!important;margin-left:auto!important;position:relative!important;top:5px;justify-content:flex-end;flex-wrap:wrap!important;column-gap:8px!important;row-gap:2px!important}html:not(.mobile-preview):not(.narrow-preview) header nav>a,html:not(.mobile-preview):not(.narrow-preview) header nav .dropbtn{font-size:.82rem!important}}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero{align-items:flex-end!important;padding-bottom:200px!important}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero h1{font-size:clamp(3.2rem,6vw,5.2rem)!important}html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero .lead{font-size:1.2rem!important;line-height:1.56!important}body:has(.hero){background-image:url("assets/img/hero/alpine-plant.jpg")!important;background-position:center!important;background-size:cover!important}body:has(.hero) .hero h1,body:has(.hero) .hero .lead,body:has(.hero) .hero .role-note{color:var(--ink)!important;text-shadow:none!important}body:has(.hero) .hero h1 .name-accent{color:var(--ink)!important}body:has(.hero) .footer,body:has(.hero) .footer>a[href="#/accessibility"],body:has(.hero) .footer>a[href="#/privacy"]{color:var(--ink)!important}body:has(.hero) .footer>a[href="#/accessibility"]:hover,body:has(.hero) .footer>a[href="#/privacy"]:hover{color:var(--accent)!important}body:not(:has(.hero)) header{background:var(--paper)!important;border-bottom-color:var(--line)!important}body:not(:has(.hero)) header nav>a,body:not(:has(.hero)) header .dropbtn,body:not(:has(.hero)) .dropmenu a{color:var(--ink)!important}body:not(:has(.hero)) header nav>a:hover,body:not(:has(.hero)) header nav>a:focus-visible,body:not(:has(.hero)) header .dropbtn:hover,body:not(:has(.hero)) header .dropbtn:focus-visible,body:not(:has(.hero)) .dropmenu a:hover,body:not(:has(.hero)) .dropmenu a:focus-visible{color:var(--accent)!important}body:not(:has(.hero)) header .home{filter:none!important}html.ipad-landscape .hero .role-note{transform:translateY(5px)!important}
+    body:not(:has(.hero)) header nav>a:focus:not(:focus-visible),body:not(:has(.hero)) header .dropbtn:focus:not(:focus-visible),body:not(:has(.hero)) .dropmenu a:focus:not(:focus-visible){color:var(--ink)!important}
+    body:has(.hero){background-image:linear-gradient(rgba(18,43,38,.10),rgba(18,43,38,.18)),url("assets/img/hero/alpine-forest.jpg")!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important}
+    body:has(.hero) .hero>div{background:rgba(251,250,247,.50)!important;padding:20px 24px 22px!important;border-radius:18px!important;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+    body:has(.hero) .footer,body:has(.hero) .footer a,body:has(.hero) .footer span,body:has(.hero) .footer>a[href="#/accessibility"],body:has(.hero) .footer>a[href="#/privacy"]{color:#f3eee4!important}body:has(.hero) .footer a:hover,body:has(.hero) .footer a:focus-visible,body:has(.hero) .footer>a[href="#/accessibility"]:hover,body:has(.hero) .footer>a[href="#/accessibility"]:focus-visible,body:has(.hero) .footer>a[href="#/privacy"]:hover,body:has(.hero) .footer>a[href="#/privacy"]:focus-visible{color:rgba(243,238,228,.72)!important}
+    @media(min-width:721px){html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero h1{font-size:clamp(2.9rem,5vw,4.4rem)!important}}
+    @media(min-width:721px){html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .hero .lead{font-size:1.25rem!important}}
+    @media(min-width:721px){html:not(.mobile-preview):not(.narrow-preview) body:has(.hero) .footer{transform:translateY(3px)!important}}
+    @media(min-width:721px){body:has(.hero) .shell{min-height:100vh;padding-bottom:0!important}body:has(.hero) main{min-height:0!important}body:has(.hero) .hero{min-height:calc(100vh - 190px)!important}}
+    @media(min-width:721px){.shell{padding-left:6.5vw!important;padding-right:6.5vw!important}.hero{padding-left:6.5vw!important;padding-right:6.5vw!important}}
+    @media(min-width:721px){header .home{margin-left:1.5vw!important}}
+    @media(min-width:721px){header nav>a,header nav .dropbtn{font-size:1.2rem!important}}
+    @media(min-width:721px){header .dropmenu a{font-size:1.2rem!important}}
+    @media(min-width:721px){body:not(:has(.hero)) header{padding-left:6.5vw!important;padding-right:6.5vw!important}body:not(:has(.hero)) .page{margin-left:1.5vw!important;margin-right:1.5vw!important}}
+    @media(min-width:721px){header .home{top:5px!important;transform:none!important}}
+    @media(min-width:721px){header .home .brand-name{top:10px!important;transform:translateY(27px)!important}}
+    html.ipad-landscape body:has(.hero) .footer{transform:translateY(-6px)!important}
+    html.ipad-landscape body:has(.hero) .shell{padding-bottom:16px!important}
+    @media(max-width:720px){body:has(.hero) .hero h1{position:relative!important;top:auto!important;margin-top:-10px!important;transform:none!important}}
+    @media(max-width:720px){html:not(.narrow-preview) body:has(.hero) .hero h1{margin-top:17px!important}}
+    @media(max-width:720px){html:not(.narrow-preview) body:has(.hero) .hero h1{padding-top:28px!important}}
+    @media(max-width:720px){body:has(.hero){background-image:linear-gradient(rgba(18,43,38,.10),rgba(18,43,38,.18)),url("assets/img/hero/alpine-forest.jpg")!important;background-position:center!important;background-size:cover!important;background-attachment:fixed!important;background-repeat:no-repeat!important}body:has(.hero) .hero{background:transparent!important;margin-top:20px!important}body:has(.hero) .hero>div{width:100%!important;max-width:100%!important;margin:0!important;padding:18px 18px 20px!important;border-radius:14px!important;overflow:hidden}}
+    @media (prefers-contrast:more){body{--ink:#111a1a;--muted:#3f4c4c;--line:#81908e}.hero:before{background:linear-gradient(90deg,rgba(5,25,21,.52),rgba(5,25,21,.18) 72%)!important}.dropmenu{border-color:#31433f!important}}
+    @media (prefers-reduced-transparency:reduce){.dropmenu{background:#fbfaf7!important;backdrop-filter:none!important}}
+    /* Impeccable homepage motion: one slow, authored arrival for the scenic welcome. */
+    @keyframes welcome-heading-arrival{from{opacity:0;transform:translateY(-32px);filter:blur(4px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+    @keyframes welcome-copy-arrival{from{opacity:0;transform:translateY(-14px);filter:blur(2px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+    @keyframes welcome-scenic-breathe{0%,100%{background-position:center center}50%{background-position:51% 49%}}
+    body:has(.hero){animation:welcome-scenic-breathe 18s ease-in-out infinite!important}
+    body:has(.hero) .hero h1{animation:welcome-heading-arrival 1750ms cubic-bezier(.16,1,.3,1) both!important}
+    body:has(.hero) .hero .lead:first-of-type{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 220ms both!important}
+    body:has(.hero) .hero .role-note{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 400ms both!important}
+    @media(prefers-reduced-motion:reduce){body:has(.hero){animation:none!important}body:has(.hero) .hero h1,body:has(.hero) .hero .lead:first-of-type,body:has(.hero) .hero .role-note{animation:none!important}}
+    /* Direct selectors keep the entrance reliable in file:// previews as well as HTTP previews. */
+    .hero h1{animation:welcome-heading-arrival 1750ms cubic-bezier(.16,1,.3,1) both!important}
+    .hero .lead:first-of-type{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 220ms both!important}
+    .hero .role-note{animation:welcome-copy-arrival 1500ms cubic-bezier(.16,1,.3,1) 400ms both!important}
+    @media(prefers-reduced-motion:reduce){.hero h1,.hero .lead:first-of-type,.hero .role-note{animation:none!important}}
+    /* Restore the confirmed slow, non-scaling welcome-page text entrance. */
+    @keyframes welcome-title-drop{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes welcome-copy-drop{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    body:has(.hero) .hero h1{animation:welcome-title-drop 1450ms cubic-bezier(.22,.8,.28,1) both!important}
+    body:has(.hero) .hero .lead:first-of-type{animation:welcome-copy-drop 1450ms cubic-bezier(.22,.8,.28,1) 180ms both!important}
+    body:has(.hero) .hero .role-note{animation:welcome-copy-drop 1450ms cubic-bezier(.22,.8,.28,1) 320ms both!important}
+    @media(prefers-reduced-motion:reduce){body:has(.hero) .hero h1,body:has(.hero) .hero .lead:first-of-type,body:has(.hero) .hero .role-note{animation:none!important}}
+    /* Shared welcome motion: replayed after the route renders in every preview wrapper. */
+    @keyframes welcome-title-arrival-shared{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes welcome-copy-arrival-shared{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+    .hero h1.welcome-motion{animation:welcome-title-arrival-shared 1700ms cubic-bezier(.22,.8,.28,1) both!important}
+    .hero .lead.welcome-motion{animation:welcome-copy-arrival-shared 1550ms cubic-bezier(.22,.8,.28,1) both!important}
+    .hero .role-note.welcome-motion{animation:welcome-copy-arrival-shared 1550ms cubic-bezier(.22,.8,.28,1) 220ms both!important}
+    @media(prefers-reduced-motion:reduce){.hero h1.welcome-motion,.hero .lead.welcome-motion,.hero .role-note.welcome-motion{animation:none!important}}
+    /* A main Research click navigates to the overview and dismisses the open flyout
+       even while the pointer remains over the navigation item. */
+    .drop.menu-dismissed .dropmenu{visibility:hidden!important;opacity:0!important;transform:translateY(-5px) scale(.98)!important;pointer-events:none!important}
+    /* Keep the shared detail modal above all page-level navigation and content. */
+    .modal-backdrop{z-index:1000!important}
+    .modal{position:relative;z-index:1001}
+    .page:has(.research-overview)>.links a{border-bottom:0!important;text-decoration:none!important}
+    .page:has(.research-overview)>.links a:hover{border-bottom-color:transparent!important;text-decoration:underline!important;text-decoration-color:var(--accent)!important;text-underline-offset:3px;color:var(--accent)!important;background:transparent!important}
+    .page:has(.research-overview)>.links a:focus-visible{border-bottom-color:transparent!important;text-decoration:underline!important;text-decoration-color:var(--accent)!important;text-underline-offset:3px;color:var(--accent)!important;outline:2px solid var(--accent);outline-offset:4px;background:transparent!important}
+    /* Final local QA corrections: quiet catalogue cards, consistent content links,
+       and no divider at the Chinese page's body transition. */
+    .clickable h2:after{content:none!important}
+    main a,main a:visited,.modal a,.modal a:visited{color:var(--accent)!important}
+    main a:hover,main a:focus-visible,.modal a:hover,.modal a:focus-visible{color:var(--accent)!important;text-decoration:underline;text-underline-offset:3px}
+    .zh-page .item{border-top:0!important}
+    .about-page>.short-bio{margin-top:8px!important;background:rgba(255,255,255,.72)!important;border-radius:16px!important}
+    .about-page>.short-bio .short-bio-note{color:var(--muted);font-style:italic}
+    .contact-page-art{display:none}
+    @media(min-width:721px){.contact-page{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,35%);column-gap:clamp(52px,8vw,112px);align-items:start}.contact-page>*:not(.contact-page-art){grid-column:1}.contact-page>p{font-size:clamp(1.02rem,1.2vw,1.16rem);line-height:1.72;margin:0 0 32px}.contact-page>p strong{display:inline-block;font-size:1.03em;margin-bottom:7px}.contact-page>p a{display:inline-block;line-height:1.9}.contact-page-art{display:block;grid-column:2;grid-row:1 / span 5;margin-top:18px;overflow:hidden;border-radius:20px;box-shadow:0 16px 34px rgba(38,51,45,.12)}.contact-page-art img{display:block;width:100%;height:auto;max-height:650px;object-fit:contain;object-position:center center}}
+    @media(min-width:1000px){.contact-page{grid-template-columns:minmax(0,1fr) minmax(190px,30%)}.contact-page-art{max-width:85%;justify-self:end}}
+    html.ipad-landscape .contact-page{grid-template-columns:minmax(0,1fr) minmax(190px,29%)}
+    html.ipad-landscape .contact-page-art{max-width:85%;justify-self:end}
+    .modal{overflow-x:hidden;overflow-wrap:anywhere}
+    .modal *{max-width:100%;overflow-wrap:anywhere}
+    #modalBody{min-width:0}
+    .quiet-list{margin:4px 0 0;padding-left:1.15em}
+    .quiet-list li{padding-left:.16em;margin:0 0 4px}
+    .quiet-list li::marker{font-size:.62em;color:var(--muted)}
+    @media(max-width:520px){body:has(.hero) .hero{margin-top:-28px!important}}
+    @media(max-width:520px){body:has(.hero) .hero>div{transform:translateY(-120px)!important}}
+    @media(max-width:340px){
+      body:has(.hero) .shell{display:flex!important;flex-direction:column!important;min-height:100vh!important;padding-bottom:40px!important}
+      body:has(.hero) main{flex:0 0 auto!important}
+      body:has(.hero) .hero{display:block!important;align-items:initial!important;min-height:0!important;height:auto!important;margin:0 -5vw!important;padding:48px 5vw 64px!important;overflow:visible!important}
+      body:has(.hero) .hero>div{transform:none!important;margin:0!important;padding:14px 16px 16px!important}
+      body:has(.hero) .hero h1{font-size:2.2rem!important;padding:16px 0 20px!important;margin:0 0 14px!important}
+      body:has(.hero) .hero .lead{font-size:.95rem!important;line-height:1.5!important;margin:0 0 10px!important}
+      body:has(.hero) .hero .role-note{margin-bottom:0!important}
+      body:has(.hero) .footer{margin-top:auto!important}
+    }
+    .zh-page>.lead{margin-bottom:8px!important}
+    .zh-page>.item>p:first-child{margin-top:0!important}
+  </style>
+</head>
+<script>const previewMode=new URLSearchParams(location.search).get('preview');document.documentElement.classList.toggle('mobile-preview',previewMode==='mobile-menu-fix');document.documentElement.classList.toggle('narrow-preview',previewMode==='narrow-phone');document.documentElement.classList.toggle('ipad-landscape',previewMode==='ipad-landscape');</script>
+<body>
+  <div class="shell">
+    <header>
+      <a class="home" href="#/" aria-label="Return to front page"><img class="brand-name" src="assets/img/xin-xu-wordmark.png" alt="Xin Xu"></a>
+      <nav aria-label="Main navigation">
+        <a href="#/">Home</a><a href="#/about">About</a>
+        <div class="drop"><button class="dropbtn" type="button" aria-haspopup="true" onclick="location.hash='#/research'">Research⌄</button><div class="dropmenu"><a href="#/research">Overview</a><a href="#/books">Books</a><a href="#/publications">Publications</a><a href="#/projects">Projects</a><a href="#/engagement">Engagement</a></div></div>
+        <a href="#/teaching">Teaching</a><span class="mobile-nav-break" aria-hidden="true"></span><a href="#/updates">Updates</a><a href="#/contact">Contact</a><a href="#/zh">中文</a>
+      </nav>
+    </header>
+    <main id="app"></main>
+    <div class="footer"><a href="#/accessibility">Accessibility</a><a href="#/privacy">Privacy</a><span>© 2026 Xin Xu</span></div>
+  </div>
+  <div class="modal-backdrop" id="modalBackdrop" role="presentation"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div class="eyebrow" id="modalType">Details</div><h2 id="modalTitle"></h2><div id="modalBody"></div></section></div>
+  <script>
+    const publications = [
+  {
+    "title": "Collaboration and competition in England’s tertiary education: an integrative review of three decades of research",
+    "summary": "This integrative review examines three decades of research on collaboration and competition in England’s tertiary education and considers how the two dynamics operate within a quasi-marketised system.",
+    "authors": "Gonzalo Hidalgo-Bazan; Xin Xu; James Robson",
+    "type": "Journal article",
+    "year": "2026",
+    "themes": [
+      "Tertiary education"
+    ],
+    "apa": "Hidalgo-Bazan, G., Xu, X., & Robson, J. (2026). Collaboration and competition in England’s tertiary education: An integrative review of three decades of research. <i>Policy Reviews in Higher Education</i>, 1–31. https://doi.org/10.1080/23322969.2026.2730226"
+  },
+  {
+    "title": "Rethinking research-on-research in higher education studies",
+    "summary": "Reviewing 430 research-on-research papers published in <i>Studies in Higher Education</i>, the study maps the field’s qualitative methods and proposes a wider methodological palette grounded in lived experience, relationality, and a critical ethics of care.",
+    "authors": "Jess Pilgrim-Brown; Lingxuan Chen; Vedika Kedia; Julie C. Y. Lin; Yiran Ma; Yunfei Ma; Matías Montero; Alis Oancea; Anding Shi; Xiaona Wang; Xin Xu; Kexin Yu",
+    "type": "Journal article",
+    "year": "2026",
+    "themes": [
+      "Research on research"
+    ],
+    "apa": "Pilgrim-Brown, J., Chen, L., Kedia, V., Lin, J. C. Y., Ma, Y., Ma, Y., Montero, M., Oancea, A., Shi, A., Wang, X., Xu, X., & Yu, K. (2026). Rethinking research-on-research in higher education studies. <i>Studies in Higher Education</i>, 1–14. https://doi.org/10.1080/03075079.2026.2710343"
+  },
+  {
+    "title": "Rethinking internationalization of higher education under geopolitical shifts: policy responses in China, Japan, South Korea, Australia, the U.S., and the U.K.",
+    "summary": "Comparing six systems, the article identifies state-led strategic, market-dependent, and demography- and function-driven policy logics through which higher education internationalisation is being recalibrated under geopolitical pressure.",
+    "authors": "Futao Huang; Masako Kotake; Yangson Kim; Lilan Chen; Xin Li; Tsukasa Daizen; Xin Xu",
+    "type": "Journal article",
+    "year": "2026",
+    "themes": [
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Huang, F., Kotake, M., Kim, Y., Chen, L., Li, X., Daizen, T., & Xu, X. (2026). Rethinking internationalization of higher education under geopolitical shifts: Policy responses in China, Japan, South Korea, Australia, the U.S., and the U.K. <i>Policy Reviews in Higher Education</i>, 1–33. https://doi.org/10.1080/23322969.2026.2682909"
+  },
+  {
+    "title": "Facilitating intergenerational social mobility through higher education: three challenges for policymakers",
+    "summary": "Drawing on interviews, focus groups, and nine country cases, the article identifies policy transfer, data quality, and assumptions about higher education’s role as three challenges for policymakers seeking to improve intergenerational social mobility.",
+    "authors": "Rachel Brooks; Benjamin Hart; Golo Henseke; David Mills; James Robson; Xin Xu",
+    "type": "Journal article",
+    "year": "2026",
+    "themes": [
+      "Tertiary education"
+    ],
+    "apa": "Brooks, R., Hart, B., Henseke, G., Mills, D., Robson, J., & Xu, X. (2026). Facilitating intergenerational social mobility through higher education: Three challenges for policymakers. <i>Policy Reviews in Higher Education</i>, 1–21. https://doi.org/10.1080/23322969.2026.2669090"
+  },
+  {
+    "title": "A practical toolkit for supporting neurodivergent learners",
+    "summary": "Based on the co-created NESTL toolkit, this article sets out practical and institutional actions for making higher education teaching, assessment, support, and learning environments accessible by design.",
+    "authors": "Xin Xu; Laura Seymour; Georgia Lin; Cressida Ryan; Siân Grønlie",
+    "type": "Public writing",
+    "year": "2026",
+    "themes": [
+      "Tertiary education"
+    ],
+    "apa": "Xu, X., Seymour, L., Lin, G., Ryan, C., & Grønlie, S. (2026). A practical toolkit for supporting neurodivergent learners. <i>Times Higher Education Campus</i>. https://www.timeshighereducation.com/campus/practical-toolkit-supporting-neurodivergent-learners"
+  },
+  {
+    "title": "From evidence to engagement: how to bring research and policy closer together?",
+    "summary": "The blog post argues that research–policy engagement depends on sustained collaborative relationships and enabling structures, which challenges the assumption that published evidence will move into policy by itself.",
+    "authors": "Helen Tattam; Xin Xu; Gonzalo Hidalgo-Bazán; James Robson; Adam Saunders; Yushan Xie",
+    "type": "Public writing",
+    "year": "2026",
+    "themes": [
+      "Research on research",
+      "Tertiary education"
+    ],
+    "apa": "Tattam, H., Xu, X., Hidalgo-Bazán, G., Robson, J., Saunders, A., & Xie, Y. (2026). From evidence to engagement: How to bring research and policy closer together? <i>HEPI</i>. https://www.hepi.ac.uk/2026/07/26/weekend-reading-from-evidence-to-engagement-how-to-bring-research-and-policy-closer-together/"
+  },
+  {
+    "title": "Reconceptualising the role of employers in England’s post-16 education and skills system: an initial analysis",
+    "summary": "Informed by more than two decades of SKOPE research and an employer roundtable, this policy brief proposes a more active role for employers in England’s post-16 education and skills system to improve alignment between skills demand, training provision, and uptake.",
+    "authors": "James Robson; Adam Saunders; Yushan Xie; Helen Tattam; Xin Xu",
+    "type": "Public writing",
+    "year": "2026",
+    "themes": [
+      "Tertiary education"
+    ],
+    "apa": "Robson, J., Saunders, A., Xie, Y., Tattam, H., & Xu, X. (2026). <i>Reconceptualising the role of employers in England’s post-16 education and skills system: An initial analysis</i>. Centre on Skills, Knowledge and Organisational Performance (SKOPE). https://skope.ox.ac.uk/publication/reconceptualising-employers-role-in-the-uks-post-16-education-and-skills-system/"
+  },
+  {
+    "title": "The gravity of the status quo: the response of research governance to system-level shocks",
+    "summary": "Interviews across six research systems show that COVID-19 exposed and entrenched inequalities, while recovery plans remained strongly pulled towards pre-pandemic institutional norms.",
+    "authors": "Gemma E. Derrick; James Robson; Alis Oancea; Xin Xu; Maria Rucsandra Stan",
+    "type": "Journal article",
+    "year": "2025",
+    "themes": [
+      "Research on research"
+    ],
+    "apa": "Derrick, G. E., Robson, J., Oancea, A., Xu, X., & Stan, M. R. (2025). The gravity of the status quo: The response of research governance to system-level shocks. <i>Higher Education, 90</i>(1), 89–108. https://doi.org/10.1007/s10734-024-01309-8"
+  },
+  {
+    "title": "Degrees of difference: international higher education and social mobility",
+    "summary": "Comparing 20 OECD countries and nine detailed country cases, the report finds that expanded higher education has not produced widespread increases in social mobility and identifies the continuing influence of family background and national education and labour-market structures.",
+    "authors": "Rachel Brooks; Benjamin Hart; Golo Henseke; David Mills; James Robson; Xin Xu",
+    "type": "Report",
+    "year": "2025",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Brooks, R., Hart, B., Henseke, G., Mills, D., Robson, J., & Xu, X. (2025). <i>Degrees of difference: International higher education and social mobility</i>. Sutton Trust. https://ora.ox.ac.uk/objects/uuid:639fec69-948d-4ac6-98b3-ddd6749d1d33"
+  },
+  {
+    "title": "Neurodivergent Education for Students, Teaching & Learning (NESTL) Toolkit",
+    "summary": "Co-created with neurodivergent students and educators, the toolkit offers guidance, case studies, checklists, and resources for neurodivergent-inclusive teaching and learning in higher education.",
+    "authors": "Xin Xu; Laura Seymour; Cressida Ryan; Siân Grønlie; Georgia Lin; Hanrui Li",
+    "type": "Resource",
+    "year": "2025",
+    "themes": [
+      "Tertiary education"
+    ],
+    "apa": "Xu, X., Seymour, L., Ryan, C., Grønlie, S., Lin, G., & Li, H. (2025). <i>Neurodivergent education for students, teaching & learning (NESTL) toolkit</i> (pp. 1–152). Department of Education, University of Oxford. https://ora.ox.ac.uk/objects/uuid:bc328507-c117-467a-881b-e48d0a0d0995"
+  },
+  {
+    "title": "Strengthening synergies: research, innovation and the future of tertiary education",
+    "summary": "The blog post examines the interdependence of education and training with research and innovation, diagnoses policy fragmentation in England, and proposes stronger cross-sector and place-based coordination.",
+    "authors": "Xin Xu",
+    "type": "Public writing",
+    "year": "2025",
+    "themes": [
+      "Tertiary education",
+      "Research on research"
+    ],
+    "apa": "Xu, X. (2025). Strengthening synergies: Research, innovation and the future of tertiary education. <i>BERA Blog</i>. https://www.bera.ac.uk/blog/strengthening-synergies-research-innovation-and-the-future-of-tertiary-education"
+  },
+  {
+    "title": "Internationalisation of higher education: what does it mean in the Chinese context?",
+    "summary": "The chapter examines how internationalisation is understood in China and uses a critical intercultural lens to question imported definitions and clarify its context-specific educational, political, economic, and cultural meanings.",
+    "authors": "Xin Xu",
+    "type": "Book chapter",
+    "year": "2024",
+    "themes": [
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2024). Internationalisation of higher education: What does it mean in the Chinese context? In F. Dervin (Ed.), <i>Critical intercultural perspectives on higher education: Characterizing, critiquing and unsettling internationalization</i> (pp. 27–49). Routledge. https://doi.org/10.4324/9781003567950"
+  },
+  {
+    "title": "Handbook of Meta-Research",
+    "summary": "This multidisciplinary handbook offers an overview of meta-research, and explores it across the public value, governance, knowledge dynamics, cultures, careers, methods, and evaluation of research.",
+    "editors": "Alis Oancea; Gemma E. Derrick; Nuzha Nuseibeh; Xin Xu",
+    "type": "Book",
+    "year": "2024",
+    "themes": [
+      "Research on research"
+    ],
+    "apa": "Oancea, A., Derrick, G. E., Nuseibeh, N., & Xu, X. (Eds.). (2024). <i>Handbook of meta-research</i>. Edward Elgar Publishing. https://doi.org/10.4337/9781839105722"
+  },
+  {
+    "title": "Meta-research as discipline, field, or spectrum",
+    "summary": "The chapter examines whether meta-research is best understood as a discipline, a field, or a broader spectrum of systematic, critical, and reflexive inquiry into research. It argues for an inclusive and interdisciplinary conception that accommodates different epistemic traditions, methods, practitioners, and stakeholders without imposing premature disciplinary boundaries.",
+    "authors": "Gemma E. Derrick; Nuzha Nuseibeh; Alis Oancea; Xin Xu",
+    "type": "Book chapter",
+    "year": "2024",
+    "themes": [
+      "Research on research"
+    ],
+    "apa": "Derrick, G. E., Nuseibeh, N., Oancea, A., & Xu, X. (2024). Meta-research as discipline, field, or spectrum. In A. Oancea, G. E. Derrick, N. Nuseibeh, & X. Xu (Eds.), <i>Handbook of meta-research</i> (pp. 1–11). Edward Elgar Publishing. https://doi.org/10.4337/9781839105722.00006"
+  },
+  {
+    "title": "The internationalization of Chinese social sciences research: publication, collaboration, and citation patterns in economics, education, and political science",
+    "summary": "Analysing 8,962 Scopus-indexed publications from 2016–2020, the article compares publication, collaboration, citation, and readership patterns in Chinese economics, education, and political science. It finds marked disciplinary differences, as economics is the most internationally integrated and political science the least; while showing the continuing importance of Western publication channels and collaborative ties.",
+    "authors": "Márton Demeter; Manuel Goyanes; Gergő Háló; Xin Xu",
+    "type": "Journal article",
+    "year": "2024",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Demeter, M., Goyanes, M., Háló, G., & Xu, X. (2025). The internationalization of Chinese social sciences research: Publication, collaboration, and citation patterns in economics, education, and political science. <i>Policy Reviews in Higher Education, 9</i>(1), 81–107. https://doi.org/10.1080/23322969.2024.2438240"
+  },
+  {
+    "title": "Research evaluation in China: policy, practice and prospects",
+    "summary": "The chapter reviews Chinese research evaluation policy since the early 2000s and examines debates around internationalisation and endogenisation, quality and quantity, justice, integrity, and the gap between policy and practice.",
+    "authors": "Xin Xu",
+    "type": "Book chapter",
+    "year": "2024",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2024). Research evaluation in China: Policy, practice and prospects. In A. Oancea, G. E. Derrick, N. Nuseibeh, & X. Xu (Eds.), <i>Handbook of meta-research</i> (pp. 172–189). Edward Elgar Publishing. https://doi.org/10.4337/9781839105722.00022"
+  },
+  {
+    "title": "Towards a Chinese definition of higher education internationalisation? A systematic review of the Chinese and English literature",
+    "summary": "This article presents a systematic review of 240 Chinese- and English-language articles on the internationalisation of higher education in the Chinese context, and critically discusses the Western definitional dominance, emerging Chinese definitions, and interacting educational, economic, political, and cultural logics.",
+    "authors": "Xin Xu",
+    "type": "Journal article",
+    "year": "2023",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Tertiary education"
+    ],
+    "apa": "Xu, X. (2023). Towards a Chinese definition of higher education internationalisation? A systematic review of the Chinese and English literature. <i>Discourse: Studies in the Cultural Politics of Education, 44</i>(3), 364–388. https://doi.org/10.1080/01596306.2023.2200075"
+  },
+  {
+    "title": "Hegemony and inequality in global science: problems of the center-periphery model",
+    "summary": "The article argues that centre–periphery theory underestimates agency beyond Euro-America and proposes a focus on hegemony and an ecology of knowledges to understand inequality and plurality in global science.",
+    "authors": "Simon Marginson; Xin Xu",
+    "type": "Journal article",
+    "year": "2023",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Marginson, S., & Xu, X. (2023). Hegemony and inequality in global science: Problems of the center-periphery model. <i>Comparative Education Review, 67</i>(1), 31–52. https://doi.org/10.1086/722760"
+  },
+  {
+    "title": "Will China stay centre-stage for international research collaboration?",
+    "summary": "The commentary considers China’s post-pandemic place in global science and argues that international collaboration is likely to revive while becoming more geographically diversified.",
+    "authors": "Xin Xu",
+    "type": "Public writing",
+    "year": "2023",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2023). Will China stay centre-stage for international research collaboration? <i>Nature, 620</i>(7973), S14. https://doi.org/10.1038/d41586-023-02163-x"
+  },
+  {
+    "title": "Big fishes in a big pond: a comparison between foreign and Chinese academics’ research influence in mainland China",
+    "summary": "Using matched Scopus data from 15 research-intensive Chinese universities, the study compares foreign academics with Chinese colleagues of the same gender, rank, and institutional unit. Foreign academics’ publications receive more citations, are more likely to appear in first-quartile journals, and involve more international co-authorship, although international collaboration does not by itself explain greater research influence.",
+    "authors": "Giulio Marini; Xin Xu",
+    "type": "Journal article",
+    "year": "2023",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Marini, G., & Xu, X. (2023). Big fishes in a big pond: A comparison between foreign and Chinese academics’ research influence in mainland China. <i>International Journal of Chinese Education, 12</i>(1), 1–17. https://doi.org/10.1177/2212585X221145244"
+  },
+  {
+    "title": "Study on the key competence and training system of academia-oriented doctoral students: based on the reflective construction of early-career academics from China and the UK",
+    "summary": "Drawing on semi-structured interviews with 22 early-career scholars in China and the UK, the article identifies six core competencies for doctoral researchers seeking academic careers. Using activity theory, it examines how these competencies can be developed through courses, research projects, academic conferences, supervisory and peer relationships, and institutional arrangements.",
+    "titleZh": "以学术为志业的博士生的核心素养及其培养机制探究——基于中英两国青年学者的反思性建构",
+    "authors": "Shuangmiao Han; Chao Gu; Xin Xu",
+    "type": "Journal article",
+    "year": "2023",
+    "themes": [
+      "Tertiary education"
+    ],
+    "apa": "Han, S., Gu, C., & Xu, X. (2023). 以学术为志业的博士生的核心素养及其培养机制探究——基于中英两国青年学者的反思性建构 [Study on the key competence and training system of academia-oriented doctoral students: Based on the reflective construction of early-career academics from China and the UK]. <i>学位与研究生教育 [Academic Degrees & Graduate Education]</i>, (6), 86–93. https://doi.org/10.16750/j.adge.2023.06.012"
+  },
+  {
+    "title": "Changing Higher Education in East Asia",
+    "summary": "This edited collection examines higher education across East Asia through internationalisation, indigenisation, mobility, governance, geopolitics, regional cooperation, and global and common-good perspectives.",
+    "editors": "Simon Marginson; Xin Xu",
+    "type": "Book",
+    "year": "2022",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Tertiary education"
+    ],
+    "apa": "Marginson, S., & Xu, X. (Eds.). (2022). <i>Changing higher education in East Asia</i>. Bloomsbury Academic. https://doi.org/10.5040/9781350216273"
+  },
+  {
+    "title": "‘The ensemble of diverse music’: internationalization strategies and endogenous agendas",
+    "summary": "The chapter frames East Asian higher education as internally diverse and shaped by tensions among internationalisation, endogenisation, regionalisation, and changing East–West relations.",
+    "authors": "Simon Marginson; Xin Xu",
+    "type": "Book chapter",
+    "year": "2022",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Tertiary education"
+    ],
+    "apa": "Marginson, S., & Xu, X. (2022). ‘The ensemble of diverse music’: Internationalization strategies and endogenous agendas. In S. Marginson & X. Xu (Eds.), <i>Changing higher education in East Asia</i> (pp. 1–30). Bloomsbury Academic. https://doi.org/10.5040/9781350216273.ch-001"
+  },
+  {
+    "title": "Internationalization of Chinese humanities and social sciences",
+    "summary": "The chapter brings in the agency-structure lens and examines tensions between internationalisation and endogenisation in Chinese humanities and social sciences, focusing on the interaction of national policy, institutional incentives, and researcher agency.",
+    "authors": "Xin Xu",
+    "type": "Book chapter",
+    "year": "2022",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2022). Internationalization of Chinese humanities and social sciences. In S. Marginson & X. Xu (Eds.), <i>Changing higher education in East Asia</i> (pp. 129–146). Bloomsbury Academic. https://doi.org/10.5040/9781350216273.ch-007"
+  },
+  {
+    "title": "Epistemic diversity and cross-cultural comparative research: ontology, challenges, and outcomes",
+    "summary": "The article presents cross-cultural comparison as a means of advancing epistemic diversity, while addressing its interpretive, methodological, linguistic, cultural, and ethical challenges.",
+    "authors": "Xin Xu",
+    "type": "Journal article",
+    "year": "2022",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2022). Epistemic diversity and cross-cultural comparative research: Ontology, challenges, and outcomes. <i>Globalisation, Societies and Education, 20</i>(1), 36–48. https://doi.org/10.1080/14767724.2021.1932438"
+  },
+  {
+    "title": "International academics in mainland China: what do we know and what do we need to know?",
+    "summary": "Reviewing evidence on academic migration to mainland China, the article proposes a typology for defining international academics, summarises key findings from existing research, and identifies priorities for future research.",
+    "authors": "Xin Xu; Andrea Braun Střelcová; Giulio Marini; Futao Huang; Yuzhuo Cai",
+    "type": "Journal article",
+    "year": "2022",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Research on research"
+    ],
+    "apa": "Xu, X., Braun Střelcová, A., Marini, G., Huang, F., & Cai, Y. (2022). International academics in mainland China: What do we know and what do we need to know? <i>European Journal of Higher Education, 12</i>(sup1), 416–433. https://doi.org/10.1080/21568235.2022.2074865"
+  },
+  {
+    "title": "Reconceptualising international academic mobility in the global knowledge system: towards a new research agenda",
+    "summary": "The article redefines international academic mobility as movements of people, knowledge, materials, and ideas and proposes a framework centred on knowledge circulation, production, networks, diplomacy, and geopolitics.",
+    "authors": "Wenqin Shen; Xin Xu; Xiaona Wang",
+    "type": "Journal article",
+    "year": "2022",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Research on research"
+    ],
+    "apa": "Shen, W., Xu, X., & Wang, X. (2022). Reconceptualising international academic mobility in the global knowledge system: Towards a new research agenda. <i>Higher Education, 84</i>(6), 1317–1342. https://doi.org/10.1007/s10734-022-00931-8"
+  },
+  {
+    "title": "Thinking through Tianxia: a new/old heuristic for worldwide higher education",
+    "summary": "The article develops <i>tianxia</i> as a heuristic for understanding worldwide higher education relations beyond nation-centred and binary frames.",
+    "titleZh": "以“天下”思天下：“天下”思想对全球高等教育的新启发",
+    "authors": "Lili Yang; Simon Marginson; Xin Xu",
+    "type": "Journal article",
+    "year": "2022",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Tertiary education"
+    ],
+    "apa": "Yang, L., Marginson, S., & Xu, X. (2022). 以“天下”思天下：“天下”思想对全球高等教育的新启发 [Thinking through Tianxia: A new/old heuristic for worldwide higher education]. <i>清华大学教育研究 [Tsinghua Journal of Education]</i>, (2), 1–13. https://doi.org/10.14138/j.1001-4519.2022.02.000113"
+  },
+  {
+    "title": "‘Thinking through the world’: a tianxia heuristic for higher education",
+    "summary": "The article proposes a world-centred version of <i>tianxia</i> as a heuristic for ethical relations in worldwide higher education, grounded in universal benefit, mutual respect, and diversity.",
+    "authors": "Lili Yang; Simon Marginson; Xin Xu",
+    "type": "Journal article",
+    "year": "2024",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Tertiary education"
+    ],
+    "apa": "Yang, L., Marginson, S., & Xu, X. (2024). ‘Thinking through the world’: A tianxia heuristic for higher education. <i>Globalisation, Societies and Education, 22</i>(2), 139–155. https://doi.org/10.1080/14767724.2022.2098696"
+  },
+  {
+    "title": "English medium higher education in China: challenges and ELT support",
+    "summary": "A mixed-methods study at eight Chinese universities identifies students’ greatest difficulties in productive language skills and maps institutional and grassroots forms of English-language support.",
+    "authors": "Sihan Zhou; Jim McKinley; Heath Rose; Xin Xu",
+    "type": "Journal article",
+    "year": "2022",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Zhou, S., McKinley, J., Rose, H., & Xu, X. (2022). English medium higher education in China: Challenges and ELT support. <i>ELT Journal, 76</i>(2), 261–271. https://doi.org/10.1093/elt/ccab082"
+  },
+  {
+    "title": "HE in East Asia – different lenses for different times",
+    "summary": "This adapted book excerpt shows East Asian higher education as diverse and shaped by tensions among endogenisation, internationalisation, regionalisation, colonial histories, and East–West relations.",
+    "authors": "Xin Xu; Simon Marginson",
+    "type": "Public writing",
+    "year": "2022",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Tertiary education"
+    ],
+    "apa": "Xu, X., & Marginson, S. (2022). HE in East Asia – different lenses for different times. <i>LSE Higher Education Blog</i>. https://blogs.lse.ac.uk/highereducation/2022/08/24/he-in-east-asia-different-lenses-for-different-times/"
+  },
+  {
+    "title": "Foreign academics in China",
+    "summary": "The article introduces evidence on who international academics in mainland China are, what motivates their moves, and what roles they are expected to play in local academia.",
+    "authors": "Yuzhuo Cai; Andrea Braun Střelcová; Giulio Marini; Futao Huang; Xin Xu",
+    "type": "Public writing",
+    "year": "2022",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Research on research"
+    ],
+    "apa": "Cai, Y., Braun Střelcová, A., Marini, G., Huang, F., & Xu, X. (2022). Foreign academics in China. <i>International Higher Education, 111</i>, 29–30. https://ejournals.bc.edu/index.php/ihe/article/view/15343"
+  },
+  {
+    "title": "The impacts of incentives for international publications on research cultures in Chinese humanities and social sciences",
+    "summary": "Drawing on 75 interviews across six Chinese universities and with journal editors, the article investigates how financial and career incentives reshape humanities and social-science research cultures. It shows how blanket schemes generate tensions around internationalisation and indigenisation, quality and quantity, integrity and instrumentalism, and equity, potentially reinforcing managerialism and constraining academic agency.",
+    "authors": "Xin Xu; Alis Oancea; Heath Rose",
+    "type": "Journal article",
+    "year": "2021",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X., Oancea, A., & Rose, H. (2021). The impacts of incentives for international publications on research cultures in Chinese humanities and social sciences. <i>Minerva, 59</i>(4), 469–492. https://doi.org/10.1007/s11024-021-09441-w"
+  },
+  {
+    "title": "A policy trajectory analysis of the internationalisation of Chinese humanities and social sciences research (1978–2020)",
+    "summary": "Reviewing national policy from 1978 to 2020, the article traces the internationalisation of Chinese humanities and social sciences from one-way ‘bringing in’ towards more reciprocal ‘going out’. Its historical-policy focus reveals enduring oscillations between internationalisation and indigenisation, ideological openness and vigilance, and national ambitions, institutional implementation, and academic practice.",
+    "authors": "Xin Xu",
+    "type": "Journal article",
+    "year": "2021",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2021). A policy trajectory analysis of the internationalisation of Chinese humanities and social sciences research (1978–2020). <i>International Journal of Educational Development, 84</i>, 102425. https://doi.org/10.1016/j.ijedudev.2021.102425"
+  },
+  {
+    "title": "The incentivisation of English medium instruction in Chinese universities: policy misfires and misalignments",
+    "summary": "The article analyses institutional English-medium-instruction policies in China and identifies misalignments among policy incentives, implementation, teacher capacity, language support, and educational aims.",
+    "authors": "Xin Xu; Heath Rose; Jim McKinley; Sihan Zhou",
+    "type": "Journal article",
+    "year": "2023",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X., Rose, H., McKinley, J., & Zhou, S. (2023). The incentivisation of English medium instruction in Chinese universities: Policy misfires and misalignments. <i>Applied Linguistics Review, 14</i>(6), 1539–1561. https://doi.org/10.1515/applirev-2021-0181"
+  },
+  {
+    "title": "Incentivising international publications: institutional policymaking in Chinese higher education",
+    "summary": "Analysing 172 incentive documents from all of China’s then ‘985’ and ‘211’ universities, the article maps how institutions design monetary bonuses and career-related rewards for international humanities and social-science publishing. It examines how evaluation rules privilege particular indexes, journals, languages, and output types, and how those design choices can reproduce publication hierarchies.",
+    "authors": "Xin Xu; Heath Rose; Alis Oancea",
+    "type": "Journal article",
+    "year": "2021",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X., Rose, H., & Oancea, A. (2021). Incentivising international publications: Institutional policymaking in Chinese higher education. <i>Studies in Higher Education, 46</i>(6), 1132–1145. https://doi.org/10.1080/03075079.2019.1672646"
+  },
+  {
+    "title": "Moving beyond centre-periphery science: towards an ecology of knowledge",
+    "summary": "The working paper argues that centre–periphery theory cannot adequately explain a diversifying global science system and proposes analysing cultural hegemony and developing an ecology of knowledges.",
+    "authors": "Simon Marginson; Xin Xu",
+    "type": "Public writing",
+    "year": "2021",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Marginson, S., & Xu, X. (2021). <i>Moving beyond centre-periphery science: Towards an ecology of knowledge</i> (CGHE Working Paper No. 63). Centre for Global Higher Education. https://doi.org/10.5287/ora-xm4oyajyd"
+  },
+  {
+    "title": "The golden guests? International faculty in mainland Chinese universities",
+    "summary": "The report provides a comprehensive overview of the status of international faculty in mainland China, and examines the backgrounds, motivations, research influence, and institutional experiences of international faculty working in mainland Chinese universities.",
+    "authors": "Giulio Marini; Xin Xu",
+    "type": "Report",
+    "year": "2021",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Research on research"
+    ],
+    "apa": "Marini, G., & Xu, X. (2021). <i>The golden guests? International faculty in mainland Chinese universities</i>. Society for Research into Higher Education. https://srhe.ac.uk/wp-content/uploads/2021/10/SRHE-Research-Report_Marini_Xu_Oct-2021_Final.pdf"
+  },
+  {
+    "title": "The landscape of educational research in the UK (compulsory and post-compulsory)",
+    "summary": "The report maps UK educational-research outputs, funding, topics, methods, and dissemination between 2010 and 2020 to assess the scale, shape, profile, and sustainability of the field.",
+    "authors": "Alis Oancea; Tiarnach McDermott; James Robson; Catherine Scutt; Xin Xu; Olga Mun; Nuzha Nuseibeh; Miranda Voss",
+    "type": "Report",
+    "year": "2021",
+    "themes": [
+      "Research on research",
+      "Tertiary education"
+    ],
+    "apa": "Oancea, A., McDermott, T., Robson, J., Scutt, C., Xu, X., Mun, O., Nuseibeh, N., & Voss, M. (2021). <i>The landscape of educational research in the UK (compulsory and post-compulsory): Report to the British Academy and Royal Society</i>. University of Oxford Department of Education. https://www.thebritishacademy.ac.uk/documents/5383/Landscape-Educational-Research-UK.pdf"
+  },
+  {
+    "title": "What does the rise of Asia mean for global higher education?",
+    "summary": "The article argues that Asia’s growing role in higher education challenges Western dominance while creating opportunities for reciprocal learning, equal dialogue, and more plural global collaboration.",
+    "authors": "Xin Xu",
+    "type": "Public writing",
+    "year": "2021",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Tertiary education"
+    ],
+    "apa": "Xu, X. (2021). What does the rise of Asia mean for global higher education? <i>Times Higher Education Campus</i>. https://www.timeshighereducation.com/campus/what-does-rise-asia-mean-global-higher-education"
+  },
+  {
+    "title": "Pronouncing students’ names correctly: the whys and hows",
+    "summary": "The article explains why correct name pronunciation in classrooms matters and offers practical guidance, including specific advice on Mandarin Chinese names.",
+    "authors": "Xin Xu; Natasha Robinson; Niall Winters",
+    "type": "Public writing",
+    "year": "2021",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X., Robinson, N., & Winters, N. (2021). Pronouncing students’ names correctly: The whys and hows. <i>Times Higher Education Campus</i>. https://www.timeshighereducation.com/campus/pronouncing-students-names-correctly-whys-and-hows"
+  },
+  {
+    "title": "Educational research in the United Kingdom, 2010–2020",
+    "summary": "This professional article presents findings from the national mapping of UK educational research, including its outputs, funding, themes, approaches, and wider research ecosystem.",
+    "authors": "Alis Oancea; Xin Xu; James Robson; Tiarnach McDermott; Catherine Scutt",
+    "type": "Public writing",
+    "year": "2021",
+    "themes": [
+      "Research on research",
+      "Tertiary education"
+    ],
+    "apa": "Oancea, A., Xu, X., Robson, J., McDermott, T., & Scutt, C. (2021). Educational research in the United Kingdom, 2010–2020. <i>Research Intelligence, 149</i>. https://www.bera.ac.uk/publication/winter-2021-22"
+  },
+  {
+    "title": "China ‘goes out’ in a centre–periphery world: incentivizing international publications in the humanities and social sciences",
+    "summary": "This article situates China’s ‘going out’ strategy within the unequal centre–periphery structure of global knowledge. It shows how incentives for international publications can reproduce Western publishing norms and marginalise Chinese-language and locally grounded work, while also identifying practices that support indigenous knowledge and a more plural, multi-centred global system.",
+    "authors": "Xin Xu",
+    "type": "Journal article",
+    "year": "2020",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2020). China ‘goes out’ in a centre–periphery world: Incentivizing international publications in the humanities and social sciences. <i>Higher Education, 80</i>(1), 157–172. https://doi.org/10.1007/s10734-019-00470-9"
+  },
+  {
+    "title": "Performing ‘under the baton of administrative power’? Chinese academics’ responses to incentives for international publications",
+    "summary": "Based on 65 interviews with humanities and social-science academics at six Chinese universities, the article develops typologies of affective responses—proactive, adaptive, resistant, hesitant, and detached—and behavioural responses—reconciling, rejecting, reforming, and rebelling. It focuses on academic agency, showing how scholars interpret, negotiate, and sometimes resist incentives imposed through administrative power.",
+    "authors": "Xin Xu",
+    "type": "Journal article",
+    "year": "2020",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2020). Performing ‘under the baton of administrative power’? Chinese academics’ responses to incentives for international publications. <i>Research Evaluation, 29</i>(1), 87–99. https://doi.org/10.1093/reseval/rvz028"
+  },
+  {
+    "title": "Feeling the Brexit shock: European connectedness and the existential crisis in UK higher education",
+    "summary": "The chapter analyses how Brexit disrupted UK higher education’s European relationships, generated uncertainty over mobility, research, identity, and finance, and exposed the sector’s dependence on European connectedness.",
+    "authors": "Simon Marginson; Vassiliki Papatsiba; Xin Xu",
+    "type": "Book chapter",
+    "year": "2020",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Marginson, S., Papatsiba, V., & Xu, X. (2020). Feeling the Brexit shock: European connectedness and the existential crisis in UK higher education. In C. Callender, W. Locke, & S. Marginson (Eds.), <i>Changing higher education for a changing world</i> (pp. 67–83). Bloomsbury Academic. https://doi.org/10.5040/9781350108448.0012"
+  },
+  {
+    "title": "Investigating policy and implementation of English-medium instruction in higher education institutions in China",
+    "summary": "The report examines the policy rationales, institutional implementation, teaching challenges, and language-support arrangements associated with English-medium instruction in Chinese higher education.",
+    "authors": "Heath Rose; Jim McKinley; Xin Xu; Sihan Zhou",
+    "type": "Report",
+    "year": "2020",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Rose, H., McKinley, J., Xu, X., & Zhou, S. (2020). <i>Investigating policy and implementation of English-medium instruction in higher education institutions in China</i>. British Council. https://www.teachingenglish.org.uk/sites/teacheng/files/K155_Investigating_policy_implementation_EMI_China_web.pdf"
+  },
+  {
+    "title": "The hunt for a coronavirus cure is showing how science can change for the better",
+    "summary": "The commentary argues that the pandemic demonstrated faster, more open and collaborative modes of research while also revealing inequalities and ethical challenges that should inform longer-term reform.",
+    "authors": "Xin Xu",
+    "type": "Public writing",
+    "year": "2020",
+    "themes": [
+      "Research on research"
+    ],
+    "apa": "Xu, X. (2020). The hunt for a coronavirus cure is showing how science can change for the better. <i>The Conversation</i>. https://theconversation.com/the-hunt-for-a-coronavirus-cure-is-showing-how-science-can-change-for-the-better-132130"
+  },
+  {
+    "title": "Impacts of COVID-19 pandemic on global research",
+    "summary": "The article reflects on how COVID-19 reshaped global research through continued collaboration and competition, forced immobility, openness and resilience, and intensified inequalities and ethical questions.",
+    "authors": "Xin Xu",
+    "type": "Public writing",
+    "year": "2020",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X. (2020). Impacts of COVID-19 pandemic on global research. <i>International Higher Education, 104</i>, 18–19. https://ora.ox.ac.uk/objects/uuid%3Aefc16fec-61d4-456a-9ab3-b4c49b1b0b62"
+  },
+  {
+    "title": "How far has the state ‘stepped back’: an exploratory study of the changing governance of higher education in China (1978–2018)",
+    "summary": "Through policy and documentary analysis, the article finds a shift from direct state control towards indirect supervision while showing that the Chinese state retains essential authority over universities.",
+    "authors": "Shuangmiao Han; Xin Xu",
+    "type": "Journal article",
+    "year": "2019",
+    "themes": [
+      "Tertiary education"
+    ],
+    "apa": "Han, S., & Xu, X. (2019). How far has the state ‘stepped back’: An exploratory study of the changing governance of higher education in China (1978–2018). <i>Higher Education, 78</i>(5), 931–946. https://doi.org/10.1007/s10734-019-00378-4"
+  },
+  {
+    "title": "Humanities and social sciences academics’ perceptions of incentive mechanism for international publications",
+    "summary": "Based on interviews with humanities and social sciences academics at a Chinese research university, the article examines differing views of international publishing incentives. It finds broad acceptance of material rewards but disagreement over the role of international publications in research evaluation, and calls for institutional approaches that respect disciplinary differences and balance internationalisation with local relevance.",
+    "titleZh": "高校教师视角下的人文社会科学国际发表及其激励制度",
+    "authors": "Xin Xu; Kai Jiang",
+    "type": "Journal article",
+    "year": "2018",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X., & Jiang, K. (2018). 高校教师视角下的人文社会科学国际发表及其激励制度 [Humanities and social sciences academics’ perceptions of incentive mechanism for international publications]. <i>高等教育研究 [Journal of Higher Education], 39</i>(1), 43–55."
+  },
+  {
+    "title": "Performance-based research funding",
+    "summary": "This reference article introduces performance-based research funding and surveys the international spread of systems that connect public research funding with assessments of institutional performance. It distinguishes retrospective assessment systems from prospective performance agreements and guides readers through key models, evidence, and critiques.",
+    "authors": "Alis Oancea; Xin Xu",
+    "type": "Resource",
+    "year": "2017",
+    "themes": [
+      "Research on research",
+      "Tertiary education"
+    ],
+    "apa": "Oancea, A., & Xu, X. (2017). Performance-based research funding. <i>Oxford Bibliographies in Education</i>. Oxford University Press. https://doi.org/10.1093/obo/9780199756810-0182"
+  },
+  {
+    "title": "Academic internationalization and Chinese social sciences evaluation system: taking SSCI indicator as an example",
+    "summary": "The article examines the use of SSCI publication counts in evaluating social-science research in Chinese universities. It argues that, although this practice can support internationalisation and more objective evaluation, overreliance on it can disadvantage locally oriented research, and calls for a more plural and locally grounded evaluation system.",
+    "titleZh": "学术国际化与社会科学评价体系——以SSCI指标的应用为例",
+    "authors": "Xin Xu; Kai Jiang",
+    "type": "Journal article",
+    "year": "2014",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "apa": "Xu, X., & Jiang, K. (2014). 学术国际化与社会科学评价体系——以SSCI指标的应用为例 [Academic internationalization and Chinese social sciences evaluation system: Taking SSCI indicator as an example]. <i>重庆高教研究 [Chongqing Higher Education Research]</i>, (6), 104–108."
+  }
+];
+
+    const projects = [
+  {
+    "title": "System-Thinking Approaches to Tertiary Education Policymaking in England",
+    "group": "Current Projects",
+    "funder": "John Fell Fund, University of Oxford",
+    "dates": "2024–26",
+    "role": "Principal Investigator",
+    "summary": "This project explores how system-thinking approaches can support more coherent, collaborative, and coordinated tertiary education policymaking in England. It examines relationships across education, training, research, and innovation through reviews of research and policy, stakeholder interviews, and workshops.",
+    "themes": [
+      "Tertiary education"
+    ],
+    "outcomes": "<i>Collaboration and competition in England’s tertiary education: an integrative review of three decades of research</i>",
+    "link": "https://www.education.ox.ac.uk/project/system-thinking-approaches-to-tertiary-education-policymaking-in-england/"
+  },
+  {
+    "title": "Research Professional Futures (RPF)",
+    "group": "Current Projects",
+    "funder": "Research England Development (RED) Fund",
+    "dates": "2026–29",
+    "role": "Co-Investigator",
+    "summary": "Research Professional Futures is a four-year national initiative examining the roles, careers, cultures, experiences, and development of research professionals in UK higher education. Our Oxford research team is contributing reviews, interviews, focus groups, surveys, case studies, and other strands of research to build an evidence base for the future development and recognition of research professional careers.",
+    "themes": [
+      "Research on research",
+      "Tertiary education"
+    ],
+    "link": "https://www.education.ox.ac.uk/project/research-professional-futures-rpf/"
+  },
+  {
+    "title": "Diverse Contributions to Educational Research",
+    "group": "Current Projects",
+    "funder": "Research Culture Project Fund, Department of Education, University of Oxford",
+    "dates": "2024–26",
+    "role": "Principal Investigator",
+    "summary": "This project examines how different forms of contribution to educational research are understood, recognised, credited, and supported. Drawing on reviews of literature and journal guidelines, as well as interviews and workshops with a wide range of educational researchers, professionals, editors, and other contributors, it explores who contributes to research, what counts as a contribution, and how educational research can better recognise and support diverse contributors.",
+    "themes": [
+      "Research on research"
+    ],
+    "link": "https://www.education.ox.ac.uk/project/diverse-contributions-to-educational-research/"
+  },
+  {
+    "title": "Neurodivergent Education for Students, Teaching & Learning (NESTL)",
+    "group": "Completed Projects",
+    "funder": "Teaching Development and Enhancement Project (TDEP) Award, University of Oxford",
+    "dates": "2024–25",
+    "role": "Co-Principal Investigator",
+    "summary": "NESTL explored how teaching and learning can become more neurodivergent-inclusive. Working with neurodivergent students and educators, the project co-developed a practical toolkit with suggestions, case studies, and resources covering awareness and understanding; teaching practice, space, and materials; assessment and feedback; and adjustment and support. The project was Highly Commended in the University of Oxford Vice-Chancellor’s Awards 2026.",
+    "themes": [
+      "Tertiary education"
+    ],
+    "outcomes": "<i>Neurodivergent Education for Students, Teaching & Learning (NESTL) Toolkit</i>",
+    "link": "https://www.education.ox.ac.uk/project/neurodivergent-education-for-students-teaching-learning-nestl/"
+  },
+  {
+    "title": "Intergenerational Mobility and Higher Education Internationally: A Comparative Perspective",
+    "group": "Completed Projects",
+    "funder": "The Sutton Trust",
+    "dates": "2025",
+    "role": "Co-Investigator",
+    "summary": "This project examined whether higher education can contribute more effectively to intergenerational social mobility. It compared higher education systems and social mobility policies across countries with different mobility outcomes and identified lessons for improving access, participation, and outcomes in the UK and US.",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "outcomes": "- <i>Degrees of Difference: International Higher Education and Social Mobility</i>\n- <i>Facilitating intergenerational social mobility through higher education: three challenges for policymakers</i>",
+    "link": "https://www.education.ox.ac.uk/project/intergenerational-mobility-and-higher-education-internationally-a-comparative-perspective/"
+  },
+  {
+    "title": "The Roles of Social Sciences and Humanities (SSH) in the Local Innovation Ecosystem",
+    "group": "Completed Projects",
+    "funder": "Department of Education, University of Oxford",
+    "dates": "2024–25",
+    "role": "Principal Investigator",
+    "summary": "This project explored the roles of social sciences and humanities in the local innovation ecosystem, taking Oxford as a case study and drawing on stakeholder interviews and network mapping. It investigated the contributions of SSH to local innovation, the dynamics of the local innovation ecosystem, and the positions and relationships of different institutions and stakeholders within it.",
+    "themes": [
+      "Research on research",
+      "Tertiary education"
+    ]
+  },
+  {
+    "title": "Research on Research: The Research Function and Mission of Higher Education",
+    "group": "Completed Projects",
+    "funder": "Economic and Social Research Council (ESRC), through the Centre for Global Higher Education",
+    "dates": "2020–24",
+    "role": "Researcher",
+    "summary": "This international Research on Research programme examined research as a central function of higher education, including research cultures and careers, organisational environments, assessment systems, policy and funding, research outputs, and the wider public contributions and value of research. Its comparative evidence base included global stakeholder interviews, policy documents, multilingual interviews with academic and professional staff, bibliometric analysis, and institutional case studies across six countries.",
+    "themes": [
+      "Research on research",
+      "Tertiary education"
+    ],
+    "link": "https://www.researchcghe.org/research/research-on-research-the-research-function-and-mission-of-higher-education/"
+  },
+  {
+    "title": "Transnational Academic Mobility to Global South: An Exploratory Study of International Faculty in China",
+    "group": "Completed Projects",
+    "funder": "Society for Research into Higher Education",
+    "dates": "2020–22",
+    "role": "Co-Principal Investigator",
+    "summary": "This project investigated international academics working in Chinese universities, drawing on survey and interview data across institutions and disciplines. It examined international academic mobility to China and used this empirical work to reconsider global academic mobility beyond conventional flows towards Euro-American higher education systems.",
+    "themes": [
+      "Internationalisation and global higher education",
+      "Research on research",
+      "Tertiary education"
+    ],
+    "outcomes": "- <i>The Golden Guests? International Faculty in Mainland Chinese Universities</i>\n- <i>International academics in mainland China: what do we know and what do we need to know?</i>",
+    "link": "https://www.education.ox.ac.uk/project/transnational-academic-mobility-to-global-south-an-exploratory-study-of-international-faculty-in-china/"
+  },
+  {
+    "title": "Ethical Research in International and Comparative Education during Covid-19",
+    "group": "Completed Projects",
+    "funder": "British Association for International and Comparative Education",
+    "dates": "2020–21",
+    "role": "Co-Investigator",
+    "summary": "This project investigated ethical issues and challenges in international and comparative education research during the COVID-19 pandemic. It combined philosophical and empirical inquiry, drawing on existing literature, ethical frameworks, and interviews with stakeholders in comparative and international education.",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "link": "https://www.education.ox.ac.uk/project/ethical-research-in-international-and-comparative-education-during-covid-19/"
+  },
+  {
+    "title": "The Landscape of Educational Research in the UK",
+    "group": "Completed Projects",
+    "funder": "British Academy and Royal Society",
+    "dates": "2020–21",
+    "role": "Researcher",
+    "summary": "This project examined the landscape of educational research in the UK, contributing evidence on the organisation, capacity, characteristics, and development of educational research.",
+    "themes": [
+      "Research on research"
+    ],
+    "outcomes": "<i>The Landscape of Educational Research in the UK (Compulsory and Post-compulsory)</i>"
+  },
+  {
+    "title": "A Comparative Study of Higher Education Curriculum on AI Ethics",
+    "group": "Completed Projects",
+    "funder": "Department of Education, University of Oxford",
+    "dates": "2020",
+    "role": "Principal Investigator",
+    "summary": "This project examined higher education curricula on AI ethics through a comparison of the UK, US, and China, alongside analysis of relevant national policies.",
+    "themes": [
+      "Tertiary education"
+    ]
+  },
+  {
+    "title": "Internationalising Humanities and Social Sciences in China: Tensions, Implications and Collaboration with the UK",
+    "group": "Completed Projects",
+    "funder": "Economic and Social Research Council (ESRC) Postdoctoral Research Fellowship",
+    "dates": "2019–20",
+    "role": "Principal Investigator",
+    "summary": "This ESRC Postdoctoral Research Fellowship extended my doctoral research on the internationalisation and evaluation of humanities and social sciences research in mainland China. The COVID-19 pandemic disrupted the project’s original plans in early 2020, while also providing a broader context for investigating tensions, inequalities, and changes in global research.",
+    "themes": [
+      "Research on research",
+      "Internationalisation and global higher education"
+    ],
+    "outcomes": "- <i>China ‘goes out’ in a centre–periphery world: incentivizing international publications in the humanities and social sciences</i>\n- <i>Internationalization of Chinese humanities and social sciences</i>\n- <i>Impacts of COVID-19 pandemic on global research</i>"
+  },
+  {
+    "title": "Investigating Policy and Implementation of English-Medium Instruction in Higher Education Institutions in China",
+    "group": "Completed Projects",
+    "funder": "British Council China",
+    "dates": "2019",
+    "role": "Researcher",
+    "summary": "This project investigated the policy and implementation of English-medium instruction in Chinese higher education. Drawing on policy analysis, interviews, and surveys across multiple universities, it examined how EMI policy was interpreted and implemented at institutional, programme, teacher, and student levels.",
+    "themes": [
+      "Tertiary education",
+      "Internationalisation and global higher education"
+    ],
+    "outcomes": "- <i>Investigating policy and implementation of English-medium instruction in higher education institutions in China</i>\n- <i>The incentivisation of English medium instruction in Chinese universities: policy misfires and misalignments</i>"
+  }
+];
+
+    // Map of project selected-publication titles to external links
+    const projectPublicationLinks = {
+    "Collaboration and competition in England’s tertiary education: an integrative review of three decades of research": "https://doi.org/10.1080/23322969.2026.2730226",
+    "Neurodivergent Education for Students, Teaching & Learning (NESTL) Toolkit": "https://www.education.ox.ac.uk/project/neurodivergent-education-for-students-teaching-learning-nestl/",
+    "Degrees of Difference: International Higher Education and Social Mobility": "https://www.suttontrust.com/our-research/degrees-of-difference/",
+    "Facilitating intergenerational social mobility through higher education: three challenges for policymakers": "https://doi.org/10.1080/23322969.2026.2669090",
+    "The Golden Guests? International Faculty in Mainland Chinese Universities": "https://srhe.ac.uk/wp-content/uploads/2021/10/SRHE-Research-Report_Marini_Xu_Oct-2021_Final.pdf",
+    "International academics in mainland China: what do we know and what do we need to know?": "https://doi.org/10.1080/21568235.2022.2074865",
+    "The Landscape of Educational Research in the UK (Compulsory and Post-compulsory)": "https://www.thebritishacademy.ac.uk/publications/landscape-educational-research/",
+    "China ‘goes out’ in a centre–periphery world: incentivizing international publications in the humanities and social sciences": "https://doi.org/10.1007/s10734-019-00470-9",
+    "Internationalization of Chinese humanities and social sciences": "https://doi.org/10.5040/9781350216273.ch-007",
+    "Impacts of COVID-19 pandemic on global research": "https://ora.ox.ac.uk/objects/uuid%3Aefc16fec-61d4-456a-9ab3-b4c49b1b0b62",
+    "Investigating policy and implementation of English-medium instruction in higher education institutions in China": "https://www.britishcouncil.cn/sites/default/files/k155_investigating_policy_implementation_emi_china_web.pdf",
+    "The incentivisation of English medium instruction in Chinese universities: policy misfires and misalignments": "https://doi.org/10.1515/applirev-2021-0181"
+};
+
+    const themeNames = {
+      tertiary: 'Tertiary education',
+      ror: 'Research on research',
+      global: 'Internationalisation and global higher education'
+    };
+
+    const typeNames = [
+      'Journal article',
+      'Book',
+      'Book chapter',
+      'Report',
+      'Resource',
+      'Public writing'
+    ];
+
+    function filterMenu(label, kind, options) {
+      return `<details class="filter-menu" data-filter-menu="${kind}"><summary>${label}: All</summary><div class="filter-options">${options.map(o => `<label><input type="checkbox" data-filter="${kind}" value="${o[0]}"> <span>${o[1]}</span></label>`).join('')}</div></details>`;
+    }
+
+    function catalogueControls(kind) {
+      const themeOptions = Object.entries(themeNames).map(([k, v]) => [v, v]);
+      const typeOptions = typeNames.map(x => [x, x]);
+      return `<div class="filterbar">${filterMenu('Theme', 'theme', themeOptions)}${kind === 'publications' ? filterMenu('Type', 'type', typeOptions) : ''}<button class="filter-reset" type="button" data-reset-filters>Reset</button></div>`;
+    }
+
+    // Build full-text search index for each publication (hidden, not displayed)
+    function pubSearchText(x) {
+      return [x.title, x.summary, x.authors, x.editors, x.type, String(x.year), ...(x.themes||[]), x.apa, x.titleZh].filter(Boolean).join(' ').toLowerCase();
+    }
+
+    // Build full-text search index for each project (hidden, not displayed)
+    function projSearchText(p) {
+      return [p.title, p.summary, p.role, p.funder, p.dates, ...(p.themes||[]), p.outcomes].filter(Boolean).join(' ').toLowerCase();
+    }
+
+    function cataloguePubCards() {
+      return publications.map((x, idx) => {
+        const themesAttr = (x.themes || []).join(';');
+        const typeAttr = x.type || '';
+        const searchText = pubSearchText(x);
+        return `<article class="item searchable clickable" data-kind="publication" data-index="${idx}" data-themes="${themesAttr}" data-type="${typeAttr}" data-search="${searchText.replace(/"/g,'&quot;')}" tabindex="0" role="button"><h2>${x.title}</h2></article>`;
+      }).join('');
+    }
+
+    function catalogueProjectCards() {
+      const current = projects.filter(p => p.group === 'Current Projects');
+      const completed = projects.filter(p => p.group === 'Completed Projects');
+
+      const renderGroup = (groupProjects) => groupProjects.map((p) => {
+        const idx = projects.indexOf(p);
+        const themesAttr = (p.themes || []).join(';');
+        const searchText = projSearchText(p);
+        return `<article class="item searchable clickable" data-kind="project" data-index="${idx}" data-themes="${themesAttr}" data-search="${searchText.replace(/"/g,'&quot;')}" tabindex="0" role="button"><h2>${p.title}</h2></article>`;
+      }).join('');
+
+      return `<h2 class="project-group-label">Current Projects</h2>` +
+        renderGroup(current) +
+        `<h2 class="project-group-label">Completed Projects</h2>` +
+        renderGroup(completed);
+    }
+
+    function buildProjectOutcomes(outcomesRaw) {
+      if (!outcomesRaw || !outcomesRaw.trim()) return '';
+      const lines = outcomesRaw.split('\n').map(l => l.trim().replace(/^[-*]\s*/, '').replace(/^<i>|<\/i>$/g, '').trim()).filter(Boolean);
+      const items = lines.map(plain => {
+        const url = projectPublicationLinks[plain] || '';
+        if (url) return `<a href="${url}" target="_blank" rel="noopener"><i>${plain}</i></a>`;
+        return `<i>${plain}</i>`;
+      });
+      return items.length > 1 ? `<ul class="quiet-list">${items.map(item => `<li>${item}</li>`).join('')}</ul>` : items[0];
+    }
+
+    // Publication copy may contain either authored HTML italics or legacy Markdown emphasis.
+    // Render both forms in the visitor-facing modal while keeping the canonical data intact.
+    function renderPublicationRichText(value) {
+      return String(value || '')
+        .replace(/\(\s*(\d{4})\s*,\s*[A-Za-z]+\s+\d{1,2}\s*\)/g, '($1)')
+        .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>');
+    }
+
+    function renderPublicationApa(x) {
+      let apaFormatted = renderPublicationRichText(x.apa);
+      const urlMatch = apaFormatted.match(/https?:\/\/[^\s<)]+/);
+      if (!urlMatch) return apaFormatted;
+      const url = urlMatch[0];
+      const linkText = url.startsWith('https://doi.org/') ? url : 'View publication';
+      return apaFormatted.replace(url, `<a href="${url}" target="_blank" rel="noopener">${linkText}</a>`);
+    }
+
+    function showDetails(el) {
+      const kind = el.dataset.kind;
+      if (kind === 'publication') {
+        const x = publications[Number(el.dataset.index)];
+        if (!x) return;
+        document.getElementById('modalType').textContent = 'Publication';
+        document.getElementById('modalTitle').textContent = x.title;
+
+        let bodyHtml = '';
+        if (x.summary) {
+          bodyHtml += `<div class="detail summary-detail"><strong>Summary</strong><p>${renderPublicationRichText(x.summary)}</p></div>`;
+        }
+        if (x.titleZh) {
+          bodyHtml += `<div class="detail"><strong>Title in Chinese</strong><p>${x.titleZh}</p></div>`;
+        }
+        if (x.authors) {
+          bodyHtml += `<div class="detail"><strong>Authors</strong><p>${x.authors}</p></div>`;
+        } else if (x.editors) {
+          bodyHtml += `<div class="detail"><strong>Editors</strong><p>${x.editors}</p></div>`;
+        }
+        if (x.type) {
+          bodyHtml += `<div class="detail"><strong>Type</strong><p>${x.type}</p></div>`;
+        }
+        if (x.year) {
+          bodyHtml += `<div class="detail"><strong>Year</strong><p>${x.year}</p></div>`;
+        }
+        if (x.themes && x.themes.length) {
+          bodyHtml += `<div class="detail themes-detail"><strong>Theme(s)</strong><p>${x.themes.join('; ')}</p></div>`;
+        }
+        if (x.apa) {
+          bodyHtml += `<div class="detail"><strong>APA reference</strong><p>${renderPublicationApa(x)}</p></div>`;
+        }
+
+        document.getElementById('modalBody').innerHTML = bodyHtml;
+      } else if (kind === 'project') {
+        const p = projects[Number(el.dataset.index)];
+        if (!p) return;
+        document.getElementById('modalType').textContent = 'Research project';
+        document.getElementById('modalTitle').textContent = p.title;
+
+        // Order: Summary, Funder, Year, Role, Theme(s), Selected publication(s), Project page
+        let bodyHtml = '';
+        if (p.summary) {
+          bodyHtml += `<div class="detail"><strong>Project summary</strong><p>${p.summary}</p></div>`;
+        }
+        if (p.funder) {
+          bodyHtml += `<div class="detail"><strong>Funder</strong><p>${p.funder}</p></div>`;
+        }
+        if (p.dates) {
+          bodyHtml += `<div class="detail"><strong>Year</strong><p>${p.dates}</p></div>`;
+        }
+        if (p.role) {
+          bodyHtml += `<div class="detail"><strong>Role</strong><p>${p.role}</p></div>`;
+        }
+        if (p.themes && p.themes.length) {
+          bodyHtml += `<div class="detail themes-detail"><strong>Theme(s)</strong><p>${p.themes.join('; ')}</p></div>`;
+        }
+        const outcomesHtml = buildProjectOutcomes(p.outcomes || '');
+        if (outcomesHtml) {
+          bodyHtml += `<div class="detail"><strong>Selected publication(s)</strong><p>${outcomesHtml}</p></div>`;
+        }
+        if (p.link) {
+          bodyHtml += `<div class="detail"><strong>Project page</strong><p><a href="${p.link}" target="_blank" rel="noopener">${p.link}</a></p></div>`;
+        }
+
+        document.getElementById('modalBody').innerHTML = bodyHtml;
+      }
+
+      document.getElementById('modalBackdrop').classList.add('open');
+      document.getElementById('modalClose').focus();
+    }
+
+    function closeDetails() {
+      document.getElementById('modalBackdrop').classList.remove('open');
+    }
+
+    function applyFilters() {
+      const route = (location.hash.slice(1) || '/').split('?')[0];
+      if (route !== '/publications' && route !== '/projects') return;
+
+      const isPub = route === '/publications';
+      const cards = [...document.querySelectorAll('.panel[data-panel="catalogue"] .item')];
+      const selectedThemes = [...document.querySelectorAll('input[data-filter="theme"]:checked')].map(x => x.value);
+      const selectedTypes = [...document.querySelectorAll('input[data-filter="type"]:checked')].map(x => x.value);
+      const q = (document.getElementById('search')?.value || '').toLowerCase().trim();
+
+      let shown = 0;
+      cards.forEach(card => {
+        const cardThemes = (card.dataset.themes || '').split(';').map(t => t.trim()).filter(Boolean);
+        const cardType = card.dataset.type || '';
+        // Use full data-search attribute for text search
+        const searchText = card.dataset.search || card.textContent.toLowerCase();
+
+        const themeOk = !selectedThemes.length || selectedThemes.some(t => cardThemes.includes(t));
+        const typeOk = !isPub || !selectedTypes.length || selectedTypes.includes(cardType);
+        const searchOk = !q || searchText.includes(q);
+
+        const visible = themeOk && typeOk && searchOk;
+        card.style.display = visible ? 'block' : 'none';
+        if (visible) shown++;
+      });
+
+      if (!isPub) {
+        document.querySelectorAll('.panel[data-panel="catalogue"] .project-group-label').forEach(label => {
+          let next = label.nextElementSibling;
+          let hasVisible = false;
+          while (next && !next.classList.contains('project-group-label')) {
+            if (next.style.display !== 'none') hasVisible = true;
+            next = next.nextElementSibling;
+          }
+          label.style.display = hasVisible ? 'block' : 'none';
+        });
+      }
+
+      // No result counts shown — only zero-result message
+      const emptyEl = document.querySelector('.filter-empty');
+      if (emptyEl) {
+        emptyEl.style.display = shown ? 'none' : 'block';
+      }
+
+      document.querySelectorAll('[data-filter-menu]').forEach(menu => {
+        const kind = menu.dataset.filterMenu;
+        const values = kind === 'theme' ? selectedThemes : selectedTypes;
+        menu.querySelector('summary').textContent = `${kind === 'theme' ? 'Theme' : 'Type'}: ${values.length ? values.join(', ') : 'All'}`;
+      });
+    }
+
+    function page() {
+      window.scrollTo(0, 0);
+      const route = location.hash.slice(1) || '/';
+      const r = route.split('?')[0];
+      let h = '';
+
+      if (r === '/') {
+        h = '<section class="hero"><div><h1>Hi, I’m <span class="name-accent">Xin Xu.</span></h1><p class="lead">I am a scholar of tertiary education and research, and I work at the University of Oxford as a Senior Lecturer.</p><p class="lead role-note">Welcome to my space!</p></div></section>';
+      } else if (r === '/about') {
+        h = `<section class="page about-page">
+          <div class="eyebrow">ABOUT ME</div>
+          <article class="item">
+            <p>I am Dr Xin Xu, a Senior Departmental Lecturer in Higher and Tertiary Education at the University of Oxford, Deputy Director of the Centre on Skills, Knowledge, and Organisational Performance (<a href="https://www.skope.ox.ac.uk/" target="_blank" rel="noopener">SKOPE</a>), and an Ordinary Fellow of <a href="https://www.kellogg.ox.ac.uk/" target="_blank" rel="noopener">Kellogg College</a>.</p>
+            <p>My research explores the changing roles of tertiary education and research, and how they interact with wider social, cultural, political, economic and technological changes. I draw on critical, comparative, and cross-cultural perspectives, with extensive empirical research on China and the UK and their connections with the wider world. Across my work, I am committed to equity, diversity, and justice. My research has been funded by the ESRC, Research England, the Sutton Trust, SRHE, BAICE, and the University of Oxford, among others.</p>
+            <p>In particular, my work focuses on three interconnected areas:</p>
+            <ul>
+              <li><strong>Tertiary education policy and practice</strong>, including higher education, skills, and lifelong learning</li>
+              <li><strong>Research on Research</strong>, including research cultures, assessment, professionals, and ecosystems</li>
+              <li><strong>International and global dynamics of higher education</strong>, including internationalisation, academic mobility, global knowledge systems, and geopolitics</li>
+            </ul>
+            <p>I also value contributing to and building communities through editorial work, collaboration, and wider academic service. My co-edited books include the <em>Handbook of Meta-Research</em> (with Alis Oancea, Gemma Derrick and Nuzha Nuseibeh; Edward Elgar, 2024) and <em>Changing Higher Education in East Asia</em> (with Simon Marginson; Bloomsbury, 2022), which received an Honourable Mention in the 2024 CIES Higher Education SIG Best Book Award. I am a Coordinating Editor of <em>Higher Education</em> and a Book Series Editor for Palgrave Studies on Chinese Education in a Global Perspective.</p>
+            <p>My research has generated wider public and policy impact. Research and commentaries have appeared in <em>Nature</em>, <em>Times Higher Education</em>, <em>The Conversation</em>, <em>HEPI Blog</em>, and <em>University World News</em>. I have also contributed research evidence and expertise to policymaking and public debate in the UK and internationally.</p>
+            <p>At the Department of Education, I lead the MSc in Education (Higher Education) pathway, convene the core module <em>Global Higher Education</em>, and supervise DPhil and MSc dissertations. I am a Fellow of the Higher Education Academy (FHEA), and have co-led the development of the <a href="https://www.education.ox.ac.uk/project/neurodivergent-education-for-students-teaching-learning-nestl/" target="_blank" rel="noopener">Neurodivergent Education for Students, Teaching &amp; Learning (NESTL) Toolkit</a>, a practical resource for supporting neurodivergent-inclusive teaching and learning. The project was Highly Commended in the University of Oxford Vice-Chancellor's Awards 2026.</p>
+            <p>I received my DPhil in Education from the University of Oxford and have studied at Tsinghua University, Peking University, and Heidelberg University.</p>
+          </article>
+          <article class="item short-bio">
+            <h2>Short bio</h2>
+            <p class="short-bio-note">Please feel free to use or adapt this bio as needed.</p>
+            <p>Dr Xin Xu is a Senior Departmental Lecturer in Higher and Tertiary Education at the University of Oxford, and Deputy Director of the Centre on Skills, Knowledge, and Organisational Performance (SKOPE). Her research explores tertiary education and research in changing social and global contexts. She is a co-editor of the <em>Handbook of Meta-Research</em> and <em>Changing Higher Education in East Asia</em>.</p>
+          </article>
+        </section>`;
+      } else if (r === '/research') {
+        h = `<section class="page">
+          <h1>Research Overview</h1>
+          <p class="lead">My research brings together three interconnected areas of work. Across all of them, I am committed to equity, diversity, and justice.</p>
+          <div class="research-overview">
+            <article class="item">
+              <h2>Tertiary education</h2>
+              <p>I study tertiary education policy and practice, including higher education, skills, and lifelong learning. I am interested in the purposes of tertiary education, how it interacts with wider changes in society, and the roles it can play in people's lives and our collective futures.</p>
+              <h3>Example work</h3>
+              <ul class="quiet-list"><li><em>Changing Higher Education in East Asia</em></li><li><em>How far has the state stepped back: changing governance of higher education in China</em></li></ul>
+              <h3>Example project</h3>
+              <p>System-Thinking Approaches to Tertiary Education Policymaking in England</p>
+            </article>
+            <article class="item">
+              <h2>Research on Research</h2>
+              <p>My work examines research cultures, assessment, professionals, and wider research and innovation ecosystems. I am interested in how research is organised, valued, governed, and experienced, and how research systems can recognise diverse forms of knowledge and contribution.</p>
+              <h3>Example work</h3>
+              <ul class="quiet-list"><li><em>Handbook of Meta-Research</em></li><li><em>The impacts of incentives for international publications on research cultures in Chinese humanities and social sciences</em></li></ul>
+              <h3>Example project</h3>
+              <p>Diverse Contributions to Educational Research</p>
+            </article>
+            <article class="item">
+              <h2>Internationalisation and global higher education</h2>
+              <p>I study internationalisation and the global dynamics of higher education, including how people move across borders, how knowledge circulates, and how institutions connect internationally. My work examines academic mobility, global knowledge systems, and how relationships across countries and regions interact with different knowledge traditions, global inequalities, and changing geopolitical conditions.</p>
+              <h3>Example work</h3>
+              <ul class="quiet-list"><li><em>Reconceptualising international academic mobility in the global knowledge system</em></li><li><em>Hegemony and inequality in global science: problems of the centre-periphery model</em></li></ul>
+              <h3>Example project</h3>
+              <p>Transnational Academic Mobility to Global South: An Exploratory Study of International Faculty in China</p>
+            </article>
+          </div>
+          <p class="links"><a href="#/publications">Explore all publications</a><a href="#/projects">Explore all projects</a></p>
+        </section>`;
+      } else if (r === '/books') {
+        h = `<section class="page">
+          <div class="eyebrow">Research</div>
+          <h1>Books</h1>
+          <div class="books-list">
+            <article class="item book-detail">
+              <div class="book-cover"><strong>Handbook of<br>Meta-Research</strong><small>Edward Elgar</small></div>
+              <div class="book-meta">
+                <h2>Handbook of Meta-Research</h2>
+                <p><b>Edited by Alis Oancea, Gemma E. Derrick, Nuzha Nuseibeh, and Xin Xu</b><br>Edward Elgar Publishing, 2024</p>
+                <p>This book brings together perspectives on how research is organised, governed, evaluated, and experienced across different institutional, disciplinary, national, and global settings. It offers a broad and critical examination of meta-research, or research on research.</p>
+                <p><b>Citation:</b> Oancea, A., Derrick, G. E., Nuseibeh, N., &amp; Xu, X. (Eds.). (2024). <i>Handbook of Meta-Research</i>. Edward Elgar Publishing.</p>
+                <p><a href="https://www.e-elgar.com/shop/gbp/handbook-of-meta-research-9781839105715.html" target="_blank" rel="noopener">View at publisher ↗</a></p>
+              </div>
+            </article>
+            <article class="item book-detail">
+              <div class="book-cover alt"><strong>Changing Higher Education<br>in East Asia</strong><small>Bloomsbury</small></div>
+              <div class="book-meta">
+                <h2>Changing Higher Education in East Asia</h2>
+                <p><b>Edited by Simon Marginson and Xin Xu</b><br>Bloomsbury Academic, 2022</p>
+                <p>This book examines how higher education across East Asia is changing through internationalisation, indigenisation, mobility, governance, and regional cooperation. It brings together perspectives from across the region to understand these transformations in their distinctive historical, cultural, and global contexts.</p>
+                <p>The book received an Honourable Mention in the 2024 CIES Higher Education SIG Best Book Award.</p>
+                <p><b>Citation:</b> Marginson, S., &amp; Xu, X. (Eds.). (2022). <i>Changing Higher Education in East Asia</i>. Bloomsbury Academic.</p>
+                <p><a href="https://www.bloomsbury.com/uk/changing-higher-education-in-east-asia-9781350216242/" target="_blank" rel="noopener">View at publisher ↗</a></p>
+              </div>
+            </article>
+          </div>
+        </section>`;
+      } else if (r === '/publications') {
+        h = `<section class="page publications-page">
+          <div class="eyebrow">Research</div>
+          <h1>Publications</h1>
+          <p class="lead">You can explore selected publications from my research by theme and output type, or search the catalogue.</p>
+          <input class="search" id="search" type="search" placeholder="Search publications…" aria-label="Search publications">
+          ${catalogueControls('publications')}
+          <div class="panel active" data-panel="catalogue">${cataloguePubCards()}</div>
+          <p class="filter-empty">No publications match these selections.</p>
+        </section>`;
+      } else if (r === '/projects') {
+        h = `<section class="page projects-page">
+          <div class="eyebrow">Research</div>
+          <h1>Projects</h1>
+          <p class="lead">You can explore selected funded projects I am working on or have worked on. Browse by theme or search the catalogue.</p>
+          <input class="search" id="search" type="search" placeholder="Search projects…" aria-label="Search projects">
+          ${catalogueControls('projects')}
+          <div class="panel active" data-panel="catalogue">${catalogueProjectCards()}</div>
+          <p class="filter-empty">No projects match these selections.</p>
+        </section>`;
+      } else if (r === '/engagement') {
+        h = `<section class="page">
+          <div class="eyebrow">Research</div>
+          <h1>Engagement</h1>
+          <p class="lead">My research contributes to policy, professional practice, and wider public conversations on tertiary education and research.</p>
+          <p class="lead">I welcome opportunities to connect research with the wider world. For enquiries about collaboration, policy and media engagement, invited talks and workshops, or research-informed resources, please feel free to <a href="#/contact">get in touch</a>.</p>
+          <div class="teaching-blocks">
+            <article class="item">
+              <h2>Public Writing and Media Engagement</h2>
+              <p>I am committed to communicating my research beyond academia and contributing to public conversations about tertiary education, research, and their changing roles in society. My research and commentaries have appeared in <em>Nature</em>, <em>Times Higher Education</em>, <em>The Conversation</em>, <em>HEPI Blog</em>, <em>University World News</em>, and other public and professional outlets. I have also been interviewed by national and international media about my research and on related topics.</p>
+            </article>
+            <article class="item">
+              <h2>Policy Impact</h2>
+              <p>I have contributed research evidence and expertise to policymaking and policy debate in the UK and internationally. This has included written and oral evidence to parliamentary and governmental bodies, commissioned research, policy briefings, and collaboration with policymakers and policy organisations.</p>
+            </article>
+            <article class="item">
+              <h2>Talks</h2>
+              <p>I regularly present my research for academic, policy, professional, and public audiences. I have delivered more than 100 talks and presentations, including invited keynotes, webinars, seminars, lectures, conference presentations, panel contributions, and workshops.</p>
+            </article>
+          </div>
+        </section>`;
+      } else if (r === '/teaching') {
+        h = `<section class="page teaching-page">
+          <div class="eyebrow">Teaching</div>
+          <h1>Teaching and Supervision</h1>
+          <p class="lead">My teaching is research-informed and grounded in equity, diversity, and inclusion. I am a Fellow of the Higher Education Academy (FHEA).</p>
+          <div class="teaching-blocks">
+            <article class="item">
+              <h2>Teaching</h2>
+              <p>I lead the <a href="https://www.ox.ac.uk/admissions/graduate/courses/msc-education-higher-education" target="_blank" rel="noopener">MSc in Education (Higher Education)</a> pathway at the University of Oxford, and convene the module <em>Global Higher Education</em>. Since 2019, I have convened and taught core modules across the MSc in Education (Higher Education) programme.</p>
+            </article>
+            <article class="item">
+              <h2>Supervision</h2>
+              <p>I supervise DPhil researchers and MSc dissertations at the Department of Education, University of Oxford. I also examine doctoral and master's research internally and externally.</p>
+              <p><em>I am not accepting applications from prospective DPhil students or visiting researchers for the next academic year.</em></p>
+            </article>
+            <article class="item">
+              <h2>Teaching Development</h2>
+              <p>I co-led the development of the <a href="https://www.education.ox.ac.uk/project/neurodivergent-education-for-students-teaching-learning-nestl/" target="_blank" rel="noopener">Neurodivergent Education for Students, Teaching &amp; Learning (NESTL) Toolkit</a>, which provides a practical framework, case studies, checklists, and resources for developing more neurodivergent-inclusive teaching and learning. The project was Highly Commended in the University of Oxford Vice-Chancellor's Awards 2026. Through my pathway leadership and module convening, I also support early-career researchers in developing their teaching practice.</p>
+            </article>
+          </div>
+        </section>`;
+      } else if (r === '/updates') {
+        h = `<section class="page updates-page">
+          <div class="eyebrow">Updates</div>
+          <h1>Updates &amp; Invitations</h1>
+          <p class="lead">Here you can find occasional updates, invitations, calls for participation, and resources related to my work.</p>
+          <p class="lead"><em>More to come. Watch this space.</em></p>
+        </section>`;
+      } else if (r === '/contact') {
+        h = `<section class="page contact-page">
+          <div class="eyebrow">Contact</div>
+          <h1>Get in Touch</h1>
+          <p><strong>Email</strong><br>xin.xu [at] education.ox.ac.uk</p>
+          <p><strong>Profiles</strong><br><a href="https://www.linkedin.com/in/xinxu-xx/" target="_blank" rel="noopener">LinkedIn</a><br><a href="https://www.education.ox.ac.uk/person/xin-xu/" target="_blank" rel="noopener">University of Oxford profile</a><br><a href="https://orcid.org/0000-0002-9972-8995" target="_blank" rel="noopener">ORCID</a></p>
+          <div class="contact-page-art" aria-hidden="true"><img src="assets/img/contact/star-paper-background-teal.png" alt=""></div>
+        </section>`;
+      } else if (r === '/accessibility') {
+        h = `<section class="page accessibility-page">
+          <div class="eyebrow">Accessibility</div>
+          <h1>Accessibility</h1>
+          <p class="lead">I have developed this website with accessibility in mind and will continue to improve it as content and features evolve.</p>
+          <article class="item">
+            <h2>Current approach</h2>
+            <p>The website uses clear headings, readable colour contrast, descriptive page titles, and layouts designed to work across different devices. Reduced-motion preferences are supported where animations are used.</p>
+          </article>
+          <article class="item">
+            <h2>Feedback</h2>
+            <p>If you encounter an accessibility barrier while using this website, please <a href="#/contact">get in touch</a> so that I can investigate and improve it. Thank you.</p>
+          </article>
+        </section>`;
+      } else if (r === '/privacy') {
+        h = `<section class="page privacy-page">
+          <div class="eyebrow">Privacy</div>
+          <h1>Privacy</h1>
+          <p class="lead">This is a personal academic website. It does not store, track, or sell visitors' data.</p>
+          <article class="item">
+            <h2>External links</h2>
+            <p>This website includes links to external websites and services, which have their own privacy policies and practices.</p>
+          </article>
+          <article class="item">
+            <h2>Image credit</h2>
+            <p>The landing page photograph is by <a href="https://unsplash.com/@wherearemyshoesdude" target="_blank" rel="noopener">M. R.</a>, shared on <a href="https://unsplash.com/photos/aerial-view-of-forest-9FOWMEFSvSw" target="_blank" rel="noopener">Unsplash</a>.</p>
+          </article>
+        </section>`;
+      } else if (r === '/zh') {
+        h = `<section class="page zh-page">
+          <div class="eyebrow">中文简介</div>
+          <h1 class="zh-heading">您好，我是许心。</h1>
+          <p class="lead">我目前在牛津大学教育系任高级讲师，同时担任SKOPE研究中心副主任和Kellogg学院Fellow。</p>
+          <article class="item">
+            <p>我主要研究高等教育和科研，关心它们为什么重要、如何随着社会变化而变化，又如何反过来影响我们生活的世界。具体而言，我的研究集中在三个方向：</p>
+            <ul>
+              <li><strong>高等教育政策与实践</strong>：高等教育、技能与终身学习</li>
+              <li><strong>关于科研的研究（Research on Research）</strong>：科研文化、科研评价、科研专业人员，以及科研与创新生态</li>
+              <li><strong>高等教育国际化与全球化</strong>：国际学术流动、全球知识体系与地缘政治</li>
+            </ul>
+            <p>在这些研究中，我一直关注公平、多元与正义的问题，也特别重视不同国家、文化和知识传统之间的比较与对话。我的很多研究围绕中国和英国展开，同时我也关注更广泛的国际议题。</p>
+            <p>如果您想进一步了解我的研究和工作，欢迎浏览本站的英文页面，也欢迎<a href="#/contact">与我联系</a>。</p>
+          </article>
+        </section>`;
+      }
+
+      document.getElementById('app').innerHTML = h;
+
+      document.querySelectorAll('#app .clickable').forEach(x => {
+        x.addEventListener('click', () => showDetails(x));
+        x.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            showDetails(x);
+          }
+        });
+      });
+
+      if (r === '/publications' || r === '/projects') {
+        document.querySelectorAll('input[data-filter]').forEach(input => input.addEventListener('change', applyFilters));
+        document.querySelector('[data-reset-filters]')?.addEventListener('click', () => {
+          document.querySelectorAll('input[data-filter]').forEach(x => x.checked = false);
+          if (document.getElementById('search')) document.getElementById('search').value = '';
+          applyFilters();
+        });
+        document.getElementById('search')?.addEventListener('input', applyFilters);
+        applyFilters();
+      }
+
+      replayWelcomeMotion();
+    }
+
+    function replayWelcomeMotion() {
+      const route = location.hash.slice(1).split('?')[0] || '/';
+      if (route !== '/') return;
+      const hero = document.querySelector('.hero');
+      if (!hero) return;
+      const elements = [hero.querySelector('h1'), hero.querySelector('.lead:first-of-type'), hero.querySelector('.role-note')].filter(Boolean);
+      elements.forEach(element => element.classList.remove('welcome-motion'));
+      void hero.offsetWidth;
+      requestAnimationFrame(() => elements.forEach(element => element.classList.add('welcome-motion')));
+    }
+
+    document.addEventListener('click', event => {
+      document.querySelectorAll('details.filter-menu[open]').forEach(menu => {
+        if (!menu.contains(event.target)) menu.removeAttribute('open');
+      });
+    });
+
+    const filterCloseTimers = new WeakMap();
+    document.addEventListener('pointerover', event => {
+      if (event.pointerType !== 'mouse') return;
+      const menu = event.target.closest('details.filter-menu');
+      if (menu) clearTimeout(filterCloseTimers.get(menu));
+    });
+    document.addEventListener('pointerout', event => {
+      if (event.pointerType !== 'mouse') return;
+      const menu = event.target.closest('details.filter-menu');
+      if (menu && (!event.relatedTarget || !menu.contains(event.relatedTarget))) {
+        clearTimeout(filterCloseTimers.get(menu));
+        filterCloseTimers.set(menu, setTimeout(() => menu.removeAttribute('open'), 220));
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.drop')) document.querySelector('.dropbtn')?.blur();
+    });
+    document.querySelectorAll('.dropmenu a').forEach(link => link.addEventListener('click', () => setTimeout(() => {
+      document.activeElement?.blur();
+      document.querySelector('.dropbtn')?.blur();
+    }, 0)));
+
+    // Research dropdown: close when main Research nav button clicked
+    const researchDrop = document.querySelector('.drop');
+    document.querySelector('.dropbtn')?.addEventListener('click', () => {
+      researchDrop?.classList.add('menu-dismissed');
+      const drop = document.querySelector('.drop');
+      if (drop) setTimeout(() => drop.querySelector('details, .dropmenu')?.removeAttribute('open'), 50);
+    });
+    researchDrop?.addEventListener('pointerleave', () => {
+      researchDrop.classList.remove('menu-dismissed');
+      document.querySelector('.dropbtn')?.blur();
+    });
+
+    addEventListener('hashchange', page);
+    document.getElementById('modalClose').addEventListener('click', closeDetails);
+    document.getElementById('modalBackdrop').addEventListener('click', e => {
+      if (e.target.id === 'modalBackdrop') closeDetails();
+    });
+    addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeDetails();
+    });
+
+    if (parent !== window) {
+      parent.postMessage({ previewHash: location.hash || '#/' }, '*');
+      addEventListener('hashchange', () => parent.postMessage({ previewHash: location.hash || '#/' }, '*'));
+    }
+
+    page();
+  </script>
+</body>
+</html>
