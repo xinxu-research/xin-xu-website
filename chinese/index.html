@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="homepage-state">
+<html lang="zh" class="">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,37 +7,14 @@
   <link rel="shortcut icon" href="/assets/icons/favicon-heart.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/icons/favicon-heart.svg">
   <title>Dr Xin Xu</title>
-  <meta name="description" content="Dr Xin Xu is a Senior Departmental Lecturer at the University of Oxford, researching tertiary education, research on research, and global higher education.">
-  <link rel="canonical" href="https://www.xin-xu.com/">
-  <link rel="preload" as="image" href="/assets/img/hero/alpine-forest.jpg">
+  <meta name="description" content="许心现任教于牛津大学教育系，研究高等教育与科研体系，关注高等教育国际化、全球知识体系以及中国与英国。">
+  <link rel="canonical" href="https://www.xin-xu.com/chinese/">
+  
   <link rel="stylesheet" href="/assets/site.css">
-  <script>
-  (() => {
-    const routes = {
-      "#/": "/",
-      "#/about": "/about/",
-      "#/research": "/research/",
-      "#/books": "/books/",
-      "#/publications": "/publications/",
-      "#/projects": "/projects/",
-      "#/engagement": "/engagement/",
-      "#/teaching": "/teaching/",
-      "#/updates": "/updates/",
-      "#/contact": "/contact/",
-      "#/zh": "/chinese/",
-      "#/accessibility": "/accessibility/",
-      "#/privacy": "/privacy/"
-    };
-    const legacyRoute = location.hash.split('?')[0];
-    if (routes[legacyRoute]) {
-      const hashQuery = location.hash.includes('?') ? '?' + location.hash.split('?').slice(1).join('?') : '';
-      location.replace(routes[legacyRoute] + hashQuery);
-    }
-  })();
-  </script>
+  
   <script>const previewMode=new URLSearchParams(location.search).get('preview');document.documentElement.classList.toggle('mobile-preview',previewMode==='mobile-menu-fix');document.documentElement.classList.toggle('narrow-preview',previewMode==='narrow-phone');document.documentElement.classList.toggle('ipad-landscape',previewMode==='ipad-landscape');</script>
 </head>
-<body class="homepage-state" data-route="home">
+<body class="" data-route="chinese">
   <div class="shell">
     <header>
       <a class="home" href="/" aria-label="Return to front page"><img class="brand-name" src="/assets/img/xin-xu-wordmark.png" alt="Xin Xu"></a>
@@ -47,7 +24,7 @@
         <a href="/teaching/">Teaching</a><span class="mobile-nav-break" aria-hidden="true"></span><a href="/updates/">Updates</a><a href="/contact/">Contact</a><a href="/chinese/">中文</a>
       </nav>
     </header>
-    <main id="app"><section class="hero"><div><h1>Hi, I’m <span class="name-accent">Xin Xu.</span></h1><p class="lead">I am a scholar of tertiary education and research, and I work at the University of Oxford as a Senior Lecturer.</p><p class="lead role-note">Welcome to my space!</p></div></section></main>
+    <main id="app"><section class="page zh-page"><div class="eyebrow">中文简介</div><h1 class="zh-heading">您好，我是许心。</h1><p class="lead">我目前在牛津大学教育系任高级讲师，同时担任SKOPE研究中心副主任和Kellogg学院Fellow。</p><p>我主要研究高等教育和科研，关心它们为什么重要、如何随着社会变化而变化，又如何反过来影响我们生活的世界。具体而言，我的研究集中在三个方向：</p><ul><li><strong>高等教育政策与实践</strong>：高等教育、技能与终身学习</li><li><strong>关于科研的研究（Research on Research）</strong>：科研文化、科研评价、科研专业人员，以及科研与创新生态</li><li><strong>高等教育国际化与全球化</strong>：国际学术流动、全球知识体系与地缘政治</li></ul><p>在这些研究中，我一直关注公平、多元与正义的问题，也特别重视不同国家、文化和知识传统之间的比较与对话。我的很多研究围绕中国和英国展开，同时我也关注更广泛的国际议题。</p><p>如果您想进一步了解我的研究和工作，欢迎浏览本站的英文页面，也欢迎<a href="/contact/">与我联系</a>。</p></section></main>
     <div class="footer"><a href="/accessibility/">Accessibility</a><a href="/privacy/">Privacy</a><span>© 2026 Xin Xu</span></div>
   </div>
   <div class="modal-backdrop" id="modalBackdrop" role="presentation"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close details">×</button><div class="eyebrow" id="modalType">Details</div><h2 id="modalTitle"></h2><div id="modalBody"></div></section></div>
