@@ -312,6 +312,14 @@
     /* Post-Phase 4 refinement: modestly reduce only the Chinese introduction heading. */
     .zh-page h1.zh-heading{font-size:clamp(2.1rem,4.2vw,3rem)}
     @media(max-width:720px){.zh-page h1.zh-heading{font-size:1.65rem}}
+    .about-page>.eyebrow a{font-family:inherit!important;font-size:inherit!important;font-weight:inherit!important;line-height:inherit!important;letter-spacing:inherit!important;text-transform:inherit!important;text-decoration:none}
+    .about-page>.short-bio{background:#edf2ef99!important}
+    .about-page>.about-name{background:#edf2ef66!important}
+    .contact-page-art{position:relative;background:transparent}
+    .contact-page-art:before{content:"";position:absolute;inset:0;background:url("data:image/webp;base64,UklGRiIBAABXRUJQVlA4IBYBAAAwCgCdASpgAI4APpFIoEulpKMipNYIALASCWcA1VUALsAp5VaB7wyBNqbVOE7J6joYJxvo7Je6y0B2INzwUfPE478cfdYwwmgL7NA6RonoQqN65i9n/qjNLvAA/vWg/73LRSGKeXQD2qHSHFb9/qDQhUskBXdAWdw7sOEWiW56FbAi9owRr4OfDntvWdLd4oRCh/rRHwe0nPrNqp16imAs5gFkit4ZofX6wBX8OZYJrUu+LqlmevmPHt7Dr650NoHc8TjVw1dXqXWGPkXHG4IAqFXdyDFb9lVDDui40RHnXJq9bITxEq6qlp8gZjFSmABCuHPy0iPpIBIOjyTi3uCBS7yKfLyBs4aiGRJxB1DM6AhT5AAAAA==") center/cover no-repeat;filter:blur(1.5px);transform:scale(1.005);transform-origin:center;transition:opacity 240ms ease-out;}
+    .contact-page-art img{position:relative;z-index:1;opacity:0;filter:blur(1.5px);transform:scale(1.005);transition:opacity 240ms ease-out,filter 240ms ease-out,transform 240ms ease-out}
+    .contact-page-art img.contact-art-ready{opacity:1;filter:none;transform:none}
+    @media(prefers-reduced-motion:reduce){.contact-page-art:before{display:none}.contact-page-art img{opacity:1;filter:none;transform:none;transition:none}.contact-page-art img.contact-art-ready{animation:none}}
     .zh-page>.lead{margin-bottom:8px!important}
     .zh-page>.item>p:first-child{margin-top:0!important}
    .book-meta b{color:var(--ink);font-size:inherit;letter-spacing:normal;text-transform:none;font-weight:700}

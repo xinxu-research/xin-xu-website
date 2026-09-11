@@ -142,6 +142,14 @@
     requestAnimationFrame(() => elements.forEach(element => element.classList.add('welcome-motion')));
   }
 
+  const contactArt = document.querySelector('.contact-page-art img');
+  if (contactArt) {
+    const reveal = () => contactArt.classList.add('contact-art-ready');
+    if (contactArt.complete) reveal();
+    else contactArt.addEventListener('load', reveal, { once: true });
+    contactArt.decode?.().then(reveal).catch(reveal);
+  }
+
   document.addEventListener('click', event => {
     document.querySelectorAll('details.filter-menu[open]').forEach(menu => {
       if (!menu.contains(event.target)) menu.removeAttribute('open');
