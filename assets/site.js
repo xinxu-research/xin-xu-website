@@ -92,7 +92,7 @@
       if (visible) shown += 1;
     });
 
-    if (isProjects) {
+    if (isProjects || isPublications) {
       document.querySelectorAll('.panel[data-panel="catalogue"] .project-group-label').forEach(label => {
         let next = label.nextElementSibling;
         let hasVisible = false;
