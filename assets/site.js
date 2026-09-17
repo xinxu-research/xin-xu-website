@@ -36,7 +36,7 @@
       let bodyHtml = '';
       if (publication.summary) bodyHtml += `<div class="detail summary-detail"><strong>Summary</strong><p>${renderPublicationRichText(publication.summary)}</p></div>`;
       if (publication.titleZh) bodyHtml += `<div class="detail"><strong>Title in Chinese</strong><p>${publication.titleZh}</p></div>`;
-      if (publication.authors) bodyHtml += `<div class="detail"><strong>Authors</strong><p>${publication.authors}</p></div>`;
+      if (publication.authors) bodyHtml += `<div class="detail"><strong>Author(s)</strong><p>${publication.authors}</p></div>`;
       else if (publication.editors) bodyHtml += `<div class="detail"><strong>Editors</strong><p>${publication.editors}</p></div>`;
       if (publication.type) bodyHtml += `<div class="detail"><strong>Type</strong><p>${publication.type}</p></div>`;
       if (publication.year) bodyHtml += `<div class="detail"><strong>Year</strong><p>${publication.year}</p></div>`;
